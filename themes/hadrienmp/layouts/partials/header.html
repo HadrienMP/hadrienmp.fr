@@ -8,7 +8,20 @@
         <nav>
             {{- $currentPage := . -}}
             {{ range .Site.Menus.main -}}
-            <a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL | absLangURL }}">
+
+            {{ $activeClass := "" }}
+            {{ if $currentPage.IsMenuCurrent "main" . }}
+                {{ $activeClass = "active" }}
+            {{ end }}
+
+            {{ $ctaClass := "" }}
+            {{- with .Page -}}
+                {{ if .Params.Cta }}
+                    {{ $ctaClass = "cta" }}
+                {{ end }}
+            {{- end -}}
+
+            <a class="{{ $activeClass }} {{ $ctaClass }}" href="{{ .URL | absLangURL }}">
                 {{.Name }}
             </a>
             {{- end }}

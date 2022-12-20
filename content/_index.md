@@ -2,7 +2,9 @@
 title: "Accueil"
 date: 2022-12-20T13:00:53+01:00
 draft: false
-menu: main
+menu: 
+    main:
+        weight: 1
 ---
 <section id="home">
     <img src="/images/ProfilDFuck.png" alt="Une photographie de moi avec un micron donnant une conférence" />

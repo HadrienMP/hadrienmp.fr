@@ -39,6 +39,7 @@ header {
     a {
         color: var(--color-text);
         text-decoration: none;
+
         &:hover {
             color: var(--color-link);
         }
@@ -47,16 +48,26 @@ header {
     nav {
         display: flex;
         gap: var(--padding);
+        align-items: center;
 
         a.active {
             color: var(--color-link);
             font-weight: bold;
         }
+
+        a.cta {
+            padding: .6rem 1rem;
+
+            &:hover,
+            &.active {
+                color: white;
+            }
+        }
     }
 
     @media screen and (max-width: 680px) {
         nav {
-            display: none;
+            display: flex;
             position: absolute;
             background-color: var(--color-background);
             right: 0;
@@ -65,11 +76,19 @@ header {
             text-align: center;
             transform: translateY(.5rem);
             gap: 0;
-            padding-bottom: 1rem;
-            box-shadow: 0 3px 4px var(--color-shadow);
+            max-height: 0;
+            overflow: hidden;
+            transition:
+                max-height cubic-bezier(.65, .05, .36, 1) .4s,
+                padding cubic-bezier(.65, .05, .36, 1) .4s;
+            box-shadow: none;
 
             a {
                 padding: 1rem;
+
+                &.cta {
+                    margin: .6rem 0;
+                }
             }
         }
 
@@ -77,8 +96,10 @@ header {
             display: inline-block;
         }
 
-        input[id="nav-toggle"]:checked ~ nav {
-            display: flex;
+        input[id="nav-toggle"]:checked~nav {
+            max-height: 100vh;
+            box-shadow: 0 3px 4px var(--color-shadow);
+            padding-bottom: 1rem;
         }
     }
 }
