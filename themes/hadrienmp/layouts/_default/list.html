@@ -1,3 +1,25 @@
+{{ define "extraHead" }}
+{{ $sass := resources.Get "sass/list.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ end }}
+
 {{ define "main" }}
-{{.Content}}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+<ul class="list">
+    {{ range .Pages }}
+    <li>
+        <a href="{{ .Permalink }}">
+            {{ $image := .Resources.GetMatch .Params.Preview.Url }}
+            <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}"
+                alt="{{ .Params.Preview.description }}">
+            <div class="content">
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Date | time.Format "02/01/2006" }}</p>
+            </div>
+        </a>
+    </li>
+    {{ end }}
+</ul>
 {{ end }}

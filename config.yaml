@@ -1,0 +1,18 @@
+baseURL: 'http://hadrienmp.fr/'
+languageCode: 'fr-fr'
+title: 'HadrienMP'
+theme: 'hadrienmp'
+
+menu:
+  main:
+  - identifier: blogs
+    name: Blog
+    pre: <i class="las la-book"></i>
+    url: /blog/
+    weight: 3
+
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

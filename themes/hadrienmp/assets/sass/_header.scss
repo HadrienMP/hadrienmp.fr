@@ -15,6 +15,7 @@ header {
         font-weight: lighter;
         font-size: 1rem;
         flex-grow: 1;
+        margin: 0;
 
         strong {
             font-weight: 500;
@@ -52,7 +53,7 @@ header {
 
         a.active {
             color: var(--color-link);
-            font-weight: bold;
+            font-weight: 500;
         }
 
         a.cta {
@@ -79,8 +80,8 @@ header {
             max-height: 0;
             overflow: hidden;
             transition:
-                max-height cubic-bezier(.65, .05, .36, 1) .4s,
-                padding cubic-bezier(.65, .05, .36, 1) .4s;
+                max-height cubic-bezier(.65, .05, .36, 1) .2s,
+                padding cubic-bezier(.65, .05, .36, 1) .2s;
             box-shadow: none;
 
             a {

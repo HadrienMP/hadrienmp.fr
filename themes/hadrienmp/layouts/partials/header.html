@@ -9,21 +9,21 @@
             {{- $currentPage := . -}}
             {{ range .Site.Menus.main -}}
 
-            {{ $activeClass := "" }}
-            {{ if $currentPage.IsMenuCurrent "main" . }}
-                {{ $activeClass = "active" }}
-            {{ end }}
-
-            {{ $ctaClass := "" }}
-            {{- with .Page -}}
-                {{ if .Params.Cta }}
-                    {{ $ctaClass = "cta" }}
+                {{ $activeClass := "" }}
+                {{ if $currentPage.IsMenuCurrent "main" . }}
+                    {{ $activeClass = "active" }}
                 {{ end }}
-            {{- end -}}
 
-            <a class="{{ $activeClass }} {{ $ctaClass }}" href="{{ .URL | absLangURL }}">
-                {{.Name }}
-            </a>
+                {{ $ctaClass := "" }}
+                {{- with .Page -}}
+                    {{ if .Params.Cta }}
+                        {{ $ctaClass = "cta" }}
+                    {{ end }}
+                {{- end -}}
+
+                <a class="{{ $activeClass }} {{ $ctaClass }}" href="{{ .URL | absLangURL }}">
+                    {{.Name }}
+                </a>
             {{- end }}
 
         </nav>

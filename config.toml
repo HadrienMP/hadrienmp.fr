@@ -1,9 +1,0 @@
-baseURL = 'http://hadrienmp.fr/'
-languageCode = 'fr-fr'
-title = 'HadrienMP'
-theme = 'hadrienmp'
-
-[markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
