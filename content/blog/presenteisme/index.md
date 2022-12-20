@@ -7,16 +7,6 @@ preview:
     url: presenteism.webp
     description: Les 3 protagonistes de la série Workaholics, au bureau, en train de ne pas travailler
 draft: false
-tags:
-  - eXtreme Programming
-  - fail
-categories:
-  - retour d'expérience
-slug: le-projet-ou-ai-essaye-le-presenteisme
-keywords:
-  - présentéisme
-  - qualité
-  - héro
 ---
 **Spoiler alert** : Le culte du temps de travail c'est mal, la qualité de code c'est bien
 

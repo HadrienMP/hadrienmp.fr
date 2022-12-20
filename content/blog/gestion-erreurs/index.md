@@ -7,14 +7,6 @@ preview:
     url: errorManagement.webp
     description: Le coyotte de Bib bip et Coyotte assis sur une fusée qu'il va allumer. Le texte dit "what could possibly go wrong ?"
 draft: false
-tags:
-  - gestion d'erreur
-  - meilleures pratiques
-  - java
-categories:
-  - meilleures pratiques
-keywords:
-  - erreur
 ---
 Dans une de mes missions avec une architecture classique en couches et sans service de routage, j'ai eu souvent des discussions et incompréhensions avec mes collègues sur la gestion des erreurs. Plutôt que de rester dans le débat théorique, j'ai voulu essayer sur un exemple "classique" toutes les techniques auxquelles je pouvais penser. J'aimerais les partager avec vous pour avoir votre avis et peut-être encore de meilleures solutions.
 
