@@ -26,6 +26,10 @@ html {
     }
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body>* {
     max-width: 1000px;
     margin: auto;
@@ -41,6 +45,8 @@ a {
     color: white;
     border-radius: 2rem;
     padding: 1rem;
+    text-align: center;
+    text-decoration: none;
 }
 
 @import "header";

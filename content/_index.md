@@ -11,6 +11,6 @@ menu:
     <div class="left">
         <h1><span>Hadrien</span><span>MENS-PELLEN</span></h1>  
         <h2>Software Crafter / Coach</h2>
-        <button class="cta">Hire me!</button>
+        <a href="/hire-me" class="cta">Hire me!</a>
     </div>
 </section>
