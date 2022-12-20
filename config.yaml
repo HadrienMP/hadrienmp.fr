@@ -1,4 +1,4 @@
-baseURL: 'http://hadrienmp.fr/'
+baseURL: 'https://hadrienmp-hugo.onrender.com/'
 languageCode: 'fr-fr'
 title: 'HadrienMP'
 theme: 'hadrienmp'
