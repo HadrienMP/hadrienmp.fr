@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+    {{- partial "head.html" . -}}
+    {{- block "extraHead" . -}}{{- end }}
+    <body>
+        {{- partial "header.html" . -}}
+        <main>
+        {{- block "main" . }}{{- end }}
+        </main>
+        {{- partial "footer.html" . -}}
+    </body>
+</html>

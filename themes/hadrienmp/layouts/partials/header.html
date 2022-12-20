@@ -1,0 +1,22 @@
+<header>
+    <h1><a href="/">Hadrien<strong>MP</strong></a></h1>
+    <div id="nav-wrapper">
+        <input type="checkbox" id="nav-toggle" />
+        <label for="nav-toggle">
+            <i class="las la-bars"></i>
+        </label>
+        <nav>
+            {{- $currentPage := . -}}
+            {{ range .Site.Menus.main -}}
+            <a class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}" href="{{ .URL | absLangURL }}">
+                {{.Name }}
+            </a>
+            {{- end }}
+
+        </nav>
+    </div>
+    <input type="checkbox" id="theme-toggle" />
+    <label for="theme-toggle">
+        <i class="lar la-moon"></i>
+    </label>
+</header>
