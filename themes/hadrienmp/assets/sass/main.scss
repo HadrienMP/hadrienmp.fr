@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,400;0,600&display=swap');
 @import "reset";
 
 $darkTransitionDuration: .4s;
 
 html {
-    font-family: "Roboto Condensed", sans-serif;
+    font-family: "Roboto", sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
     transition: color ease $darkTransitionDuration, background-color ease $darkTransitionDuration;
