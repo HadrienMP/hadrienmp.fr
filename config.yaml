@@ -11,6 +11,8 @@ menu:
     url: /blog/
     weight: 3
 
+params:
+  description: Hadrien Mens-Pellen, software crafter et coach. Développeur professionnel depuis 13 ans, je vous aide à créer et maintenir du code qui résiste à l'épreuve du temps.
 
 markup:
   goldmark:

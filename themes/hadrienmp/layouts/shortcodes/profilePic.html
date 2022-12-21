@@ -3,6 +3,6 @@
 
 {{ $image := resources.GetMatch $src }}
 {{ with $image }}
-{{ $resized := .Resize "200x200 webp" }}
+{{ $resized := .Resize "200x200 webp picture" }}
 <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $alt }}">
 {{ end }}
