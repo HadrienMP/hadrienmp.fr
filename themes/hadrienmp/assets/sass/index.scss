@@ -25,7 +25,7 @@
             margin: 0;
 
             span:first-child {
-                font-weight: bold;
+                font-weight: 600;
                 font-size: 3.1rem;
                 color: var(--color-text);
             }
@@ -39,12 +39,12 @@
         h2 {
             color: var(--color-text);
             font-size: 1rem;
-            font-weight: lighter;
+            font-weight: 100;
         }
 
         a.cta {
             width: 100%;
-            font-weight: bold;
+            font-weight: 600;
             font-size: 1rem;
             box-shadow: 2px 2px 4px var(--color-shadow);
         }
