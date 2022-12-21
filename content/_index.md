@@ -7,7 +7,7 @@ menu:
         weight: 1
 ---
 <section id="home">
-    <img src="/images/ProfilDFuck.png" alt="Une photographie de moi avec un micron donnant une conférence" />
+    {{< profilePic src="images/ProfilDFuck.png" alt="Une photographie de moi avec un micro donnant une conférence" >}}
     <div class="left">
         <h1><span>Hadrien</span><span>MENS-PELLEN</span></h1>  
         <h2>Software Crafter / Coach</h2>
