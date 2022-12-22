@@ -1,0 +1,13 @@
+{{ $src := .Get "src"}}
+{{ $alt := .Get "alt"}}
+{{ $width := .Get "width"}}
+{{ $height := .Get "height"}}
+
+{{ $image := resources.GetMatch $src }}
+
+{{ $size := "" | append $width "x" $height}}
+
+{{ with $image }}
+{{ $resized := .Resize $size }}
+<img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $alt }}">
+{{ end }}

@@ -25,26 +25,28 @@
             margin: 0;
 
             span:first-child {
-                font-weight: 600;
+                font-weight: var(--weight-bold);
                 font-size: 3rem;
                 color: var(--color-text);
             }
 
             span {
-                font-weight: 400;
+                font-weight: var(--weight-bold);
                 font-size: 1.67rem;
                 color: var(--color-link);
             }
         }
         h2 {
+            margin: 0;
             color: var(--color-text);
             font-size: 1rem;
-            font-weight: 100;
+            font-weight: var(--weight-normal);
+
         }
 
         a.cta {
             width: 100%;
-            font-weight: 600;
+            font-weight: var(--weight-bold);
             font-size: 1rem;
             box-shadow: 2px 2px 4px var(--color-shadow);
         }

@@ -12,13 +12,13 @@ header {
     z-index: 1;
 
     h1 {
-        font-weight: 100;
+        font-weight: var(--weight-normal);
         font-size: 1rem;
         flex-grow: 1;
         margin: 0;
 
         strong {
-            font-weight: 600;
+            font-weight: var(--weight-bold);
         }
     }
 
@@ -53,7 +53,7 @@ header {
 
         a.active {
             color: var(--color-link);
-            font-weight: 600;
+            font-weight: var(--weight-bold);
         }
 
         a.cta {
