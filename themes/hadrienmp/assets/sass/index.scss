@@ -18,6 +18,9 @@
         display: flex;
         flex-direction: column;
         gap: 1.6rem;
+        & > * {
+            text-align: center;
+        }
 
         h1 {
             display: flex;
@@ -25,8 +28,8 @@
             margin: 0;
 
             span:first-child {
-                font-weight: var(--weight-bold);
-                font-size: 3rem;
+                font-weight: var(--weight-bolder);
+                font-size: 3.2rem;
                 color: var(--color-text);
             }
 

@@ -9,9 +9,9 @@ html {
     transition: color ease $darkTransitionDuration, background-color ease $darkTransitionDuration;
     font-weight: var(--weight-normal);
     --padding: 2rem;
-    --weight-normal: 200;
+    --weight-normal: 300;
     --weight-bold: 400;
-    --weight-bolder: 600;
+    --weight-bolder: 700;
 
     &[data-theme="light"] {
         --color-text: black;
@@ -73,7 +73,7 @@ h5 {
 h1 {
     color: var(--color-link);
     font-size: 2rem;
-    font-weight: var(--weight-bold);
+    font-weight: var(--weight-bolder);
     margin: 2rem 0 1rem;
 }
 
