@@ -20,4 +20,4 @@ Fonctionnalités :
 
 <br />
 <br />
-<a href="https://mobtime.hadrienmp.fr" class="cta" target="_blank">Testez-moi !</a>
+<a href="https://mobtime.hadrienmp.fr" class="cta" target="_blank">mobtime.hadrienmp.fr</a>
