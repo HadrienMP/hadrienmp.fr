@@ -5,7 +5,7 @@ ul.list {
 
     li {
         flex-grow: 1;
-        max-width: 49%;
+        max-width: 48.5%;
         overflow: hidden;
         background-color: var(--color-card);
         border-radius: 5px;
@@ -13,7 +13,7 @@ ul.list {
         transition: transform ease .2s;
         margin: 0;
         padding: 0;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
 
         &:hover {
             transform: scale(1.02);
