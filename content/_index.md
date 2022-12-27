@@ -11,6 +11,6 @@ menu:
     <div class="left">
         <h1><span>Hadrien</span><span>MENS-PELLEN</span></h1>  
         <h2>Software Crafter / Coach</h2>
-        <a href="/hire-me" class="cta">Hire me!</a>
+        <a href="mailto:pro@hadrienmp.fr?subject=Prise de contact&body=Aimeriez-vous du coaching, du développement, une intervention gratuite courte ? Comment voulez-vous que je vous recontacte ?mailto:pro@hadrienmp.fr?subject=Prise de contact&body=Aimeriez-vous du coaching, du développement, une intervention gratuite courte ? Comment voulez-vous que je vous recontacte" class="cta">Hire me!</a>
     </div>
 </section>
