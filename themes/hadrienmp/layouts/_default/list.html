@@ -10,7 +10,14 @@
 <ul class="list">
     {{ range .Pages }}
     <li>
-        <a href="{{ .Permalink }}">
+        {{ $link := .Permalink }}
+        {{ $target := "normal" }}
+        {{ if .Params.External }}
+            {{ $link = .Params.External }}
+            {{ $target := "_blank" }}
+            <p class="external">External</p>
+        {{ end }}
+        <a href="{{ $link }}" target="{{ $target }}">
             {{ with .Resources.GetMatch .Params.Preview.Url }}
             {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
             <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
