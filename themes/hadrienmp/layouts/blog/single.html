@@ -1,9 +1,9 @@
 {{ define "main" }}
-{{ $image := .Resources.GetMatch .Params.Preview.Url }}
-{{ with $image }}
-{{ $resized := $image }}
-<img class="top-cover" src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"
+{{ with .Resources.GetMatch .Params.Preview.Url }}
+{{ with .Resize "1000x webp" }}
+<img class="top-cover" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
     alt="{{ .Params.Preview.Description }}">
+{{ end }}
 {{ end }}
 <div id="blog-title">
     <h1>{{.Title}}</h1>
