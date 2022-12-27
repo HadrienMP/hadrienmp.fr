@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div id="side-preview">
     <aside>
-        {{ with resources.GetMatch .Params.Preview.Url }}
+        {{ with .Resources.GetMatch .Params.Preview.Url }}
         {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
         <img class="top-cover" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
             alt="{{ .Params.Preview.Description }}">
