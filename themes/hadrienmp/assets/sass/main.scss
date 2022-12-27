@@ -8,6 +8,7 @@ html {
     color: var(--color-text);
     transition: color ease $darkTransitionDuration, background-color ease $darkTransitionDuration;
     font-weight: var(--weight-normal);
+    height: 100%;
     --padding: 2rem;
     --weight-normal: 300;
     --weight-bold: 400;
@@ -36,6 +37,11 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 body>* {
     max-width: 1000px;
     margin: auto;
@@ -59,6 +65,7 @@ main {
     z-index: 0;
     padding: var(--padding);
     padding-top: 0.4rem;
+    flex-grow: 1;
 }
 
 h1,
@@ -121,6 +128,7 @@ blockquote {
     padding: .4rem 2rem;
     border-radius: 5px;
     font-size: 1.1rem;
+
     em {
         font-weight: var(--weight-normal);
         font-size: 1rem;
@@ -132,6 +140,7 @@ blockquote {
 em {
     font-style: italic;
 }
+
 strong {
     font-weight: var(--weight-bolder);
 }
@@ -162,7 +171,7 @@ hr {
     width: 100%;
     border-top: 1px solid var(--color-link);
     border-bottom: 1px solid var(--color-link);
-    padding: 1rem 0; 
+    padding: 1rem 0;
     margin: 1rem 0 1.4rem;
 
     p {
@@ -172,3 +181,34 @@ hr {
 }
 
 @import "header";
+
+footer {
+    padding: var(--padding);
+    width: 100%;
+
+    ul {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+
+        li {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            a {
+                border: solid 1px var(--color-link);
+                color: var(--color-link);
+                padding: .4rem;
+                padding-bottom: .3rem;
+                font-size: 1.2rem;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: var(--color-link);
+                    color: var(--color-accent-text);
+                }
+            }
+        }
+    }
+}

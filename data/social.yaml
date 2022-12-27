@@ -1,0 +1,15 @@
+- url: mailto:pro@hadrienmp.fr
+  label: Mail
+  icon: <i class="lar la-envelope"></i>
+- url: http://www.brownbaglunch.fr/baggers.html#hadrien-mens-pellen
+  label: Brown Bag Lunch
+  icon: <i class="las la-shopping-bag"></i>
+- url: https://twitter.com/hadrienmp
+  label: Twitter
+  icon: <i class="lab la-twitter"></i>
+- url: http://www.linkedin.com/pub/hadrien-mens-pellen/31/712/390
+  label: LinkedIn
+  icon: <i class="lab la-linkedin"></i>
+- url: https://github.com/HadrienMP
+  label: Github
+  icon: <i class="lab la-github-alt"></i>
