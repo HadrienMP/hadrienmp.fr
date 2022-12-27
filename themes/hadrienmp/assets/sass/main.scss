@@ -129,6 +129,9 @@ blockquote {
 em {
     font-style: italic;
 }
+strong {
+    font-weight: var(--weight-bolder);
+}
 
 .highlight pre {
     padding: 1rem 2rem;
