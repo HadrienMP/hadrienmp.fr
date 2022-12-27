@@ -1,11 +1,9 @@
 #home {
     display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     gap: 3rem;
     align-items: center;
+    line-height: 1;
+    margin: auto 0;
 
     img {
         width: 200px;
@@ -58,17 +56,11 @@
     @media screen and (max-width: 512px) {
         & {
             flex-direction: column;
+            gap: 2rem;
         }
         img {
             width: 160px;
             height: 160px;
         }        
     }
-}
-
-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }

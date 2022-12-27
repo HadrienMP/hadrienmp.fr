@@ -15,9 +15,11 @@
                 {{ end }}
 
                 {{ $ctaClass := "" }}
-                {{ if eq .Identifier "cta" }}
+                {{- with .Page -}}
+                    {{ if .Params.Cta }}
                     {{ $ctaClass = "cta" }}
                 {{ end }}
+                {{- end -}}
 
                 <a class="{{ $activeClass }} {{ $ctaClass }}" href="{{ .URL | absLangURL }}">
                     {{.Name }}

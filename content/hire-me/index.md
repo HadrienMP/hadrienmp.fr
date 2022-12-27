@@ -1,11 +1,11 @@
 ---
-title: "À Propos"
+title: "Qui suis-je ?"
 date: 2022-12-20T15:38:58+01:00
 draft: false
 layout: side-preview
 menu: 
     main:
-        weight: 2
+        weight: 4
 preview:
     url: craft-macbook.jpeg
     description: Une personne sur un ordinateur portable posé sur un établi de menuisier. Il y a des outils de menuiserie sur l'établi (scie, marteau) 

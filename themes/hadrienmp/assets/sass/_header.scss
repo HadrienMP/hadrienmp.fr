@@ -13,12 +13,14 @@ header {
     gap: var(--padding);
     z-index: 1;
     width: 100%;
+    line-height: 1;
 
     h1 {
         font-weight: var(--weight-normal);
         font-size: 1rem;
         flex-grow: 1;
         margin: 0;
+        color: var(--color-text);
 
         strong {
             font-weight: var(--weight-bolder);

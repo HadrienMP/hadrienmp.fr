@@ -15,11 +15,7 @@ menu:
     pre: <i class="las la-book"></i>
     url: /app/
     weight: 3
-  - identifier: cta
-    name: Hire Me!
-    pre: <i class="las la-book"></i>
-    url: mailto:pro@hadrienmp.fr?subject=Prise de contact&body=Aimeriez-vous du coaching, du développement, une intervention gratuite courte ? Comment voulez-vous que je vous recontacte ?
-    weight: 3
+
 
 params:
   description: Hadrien Mens-Pellen, software crafter et coach. Développeur professionnel depuis 13 ans, je vous aide à créer et maintenir du code qui résiste à l'épreuve du temps.

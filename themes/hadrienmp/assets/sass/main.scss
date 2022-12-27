@@ -1,4 +1,5 @@
 @import "reset";
+@import "common";
 
 $darkTransitionDuration: .4s;
 
@@ -41,15 +42,25 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
-    line-height: 1.25
+    line-height: 1.25;
+    justify-content: space-between;
 }
 body>* {
     max-width: 1000px;
-    margin: auto;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1000px) {
+        max-width: 100%;
+    }
 }
 
 a {
     color: var(--color-link);
+    text-decoration: none;
+    
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .cta {
@@ -67,6 +78,8 @@ main {
     padding: var(--padding);
     padding-top: 0.4rem;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 h1,
@@ -182,34 +195,3 @@ hr {
 }
 
 @import "header";
-
-footer {
-    padding: var(--padding);
-    width: 100%;
-
-    ul {
-        display: flex;
-        gap: 1rem;
-        justify-content: flex-end;
-
-        li {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-
-            a {
-                border: solid 1px var(--color-link);
-                color: var(--color-link);
-                padding: .4rem;
-                padding-bottom: .3rem;
-                font-size: 1.2rem;
-                border-radius: 50%;
-
-                &:hover {
-                    background-color: var(--color-link);
-                    color: var(--color-accent-text);
-                }
-            }
-        }
-    }
-}
