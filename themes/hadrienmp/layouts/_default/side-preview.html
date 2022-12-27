@@ -2,7 +2,7 @@
 <div id="side-preview">
     <aside>
         {{ with .Resources.GetMatch .Params.Preview.Url }}
-        {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+        {{ with .Resize "720x webp" }}
         <img class="top-cover" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
             alt="{{ .Params.Preview.Description }}">
         {{ end }}
