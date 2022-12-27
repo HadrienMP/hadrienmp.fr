@@ -4,7 +4,7 @@ description: Comment je suis devenu un super héro en faisant du présentéisme.
   tout, mais j'étais adulé. Ou pourquoi l'eXtreme Programming avait raison.
 date: 2017-05-31T11:11:53.423Z
 preview: 
-    url: presenteism.webp
+    url: preview.jpg
     description: Les 3 protagonistes de la série Workaholics, au bureau, en train de ne pas travailler
 draft: false
 ---
@@ -80,7 +80,7 @@ Ces conclusions paraissent évidentes à de nombreux développeurs. Pourtant mê
 
 Parfois je doute encore aussi. Je suis souvent tenté de faire plaisir au client en livrant vite. Je sacrifie la qualité ou mon temps personnel. A chaque fois que je l'ai fait, ça m'a créé des problèmes (régressions, élévation du cout de maintenance etc.). D'autres fois je pars dans l'autre direction et je deviens un nazi de la qualité de code et je tourne en rond. Un jour je trouverais l'équilibre (binômage to the rescue). 
 
-![Equilibre, Sapologie](/images/sapologie.jpeg)
+![Equilibre, Sapologie](sapologie.jpg)
 
 Pour conclure je vais paraphraser *Clean Coder* : 
 
