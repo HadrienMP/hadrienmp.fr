@@ -11,12 +11,17 @@
     {{ range .Pages }}
     <li>
         <a href="{{ .Permalink }}">
-            {{ $image := .Resources.GetMatch .Params.Preview.Url }}
-            <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}"
+            {{ with .Resources.GetMatch .Params.Preview.Url }}
+            {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+            <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
                 alt="{{ .Params.Preview.description }}">
+            {{ end }}
+            {{ end }}
             <div class="content">
                 <h3>{{ .Title }}</h3>
                 <p>{{ .Date | time.Format "02/01/2006" }}</p>
+                <hr />
+                <p>{{ .Description }}</p>
             </div>
         </a>
     </li>

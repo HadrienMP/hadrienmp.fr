@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div id="side-preview">
+    <aside>
+        {{ with resources.GetMatch .Params.Preview.Url }}
+        {{ with .Resize (printf "%dx%d webp" .Width .Height) }}
+        <img class="top-cover" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+            alt="{{ .Params.Preview.Description }}">
+        {{ end }}
+        {{ end }}
+    </aside>
+    <section>
+        <h1>{{.Title}}</h1>
+        {{.Content}}
+    </section>
+</div>
+{{ end }}
+
+{{ define "extraHead" }}
+{{ with $sass := resources.GetMatch "sass/side-preview.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ end }}
+{{ end }}
