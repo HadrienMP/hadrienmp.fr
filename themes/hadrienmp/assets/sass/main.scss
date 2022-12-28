@@ -48,10 +48,7 @@ body {
 body>* {
     max-width: 1000px;
     margin: 0 auto;
-
-    @media screen and (max-width: 1000px) {
-        max-width: 100%;
-    }
+    width: 100%;
 }
 
 a {
