@@ -5,7 +5,7 @@ draft: false
 layout: side-preview
 menu: 
     main:
-        weight: 4
+        weight: 1
 preview:
     url: craft-macbook.jpeg
     description: Une personne sur un ordinateur portable posé sur un établi de menuisier. Il y a des outils de menuiserie sur l'établi (scie, marteau) 

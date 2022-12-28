@@ -7,24 +7,25 @@
         </label>
         <nav>
             {{ $currentPage := . }}
+
             {{ range .Site.Menus.main -}}
 
-                {{ $activeClass := "" }}
-                {{ if $currentPage.IsMenuCurrent "main" . }}
-                    {{ $activeClass = "active" }}
-                {{ end }}
+            {{ $activeClass := "" }}
+            {{ if eq $currentPage.RelPermalink .URL }}
+            {{ $activeClass = "active" }}
+            {{ end }}
 
-                {{ $ctaClass := "" }}
-                {{- with .Page -}}
-                    {{ if .Params.Cta }}
-                    {{ $ctaClass = "cta" }}
-                {{ end }}
-                {{- end -}}
+            {{ $ctaClass := "" }}
+            {{- with .Page -}}
+            {{ if .Params.Cta }}
+            {{ $ctaClass = "cta" }}
+            {{ end }}
+            {{ end }}
 
-                <a class="{{ $activeClass }} {{ $ctaClass }}" href="{{ .URL | absLangURL }}">
-                    {{.Name }}
-                </a>
-            {{- end }}
+            <a class="{{ $activeClass }} {{ $ctaClass }}" href="{{ .URL | absLangURL }}" title="{{ .Title }}">
+                {{.Name }}
+            </a>
+            {{ end }}
 
         </nav>
     </div>
