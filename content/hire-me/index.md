@@ -29,4 +29,4 @@ Les Brown Bag Lunch sont des évènements techniques peu chers.
 2. Vous m'invitez à manger dans vos locaux sur __Nantes__, ou en __visio__. En général c'est le midi mais suivant nos disponibilités ça pourrait être en fin de journée.
 
 ## Meetup
-Je coanime le meetup [Mob Programming Francophone](https://www.meetup.com/fr-FR/paris-mob-programming/). C'est gratuit. Si vous voulez participer à une équipe qui se passe bien dans un espace sécurisant, c'est le endroit !
+Je coanime le meetup [Mob Programming Francophone](https://www.meetup.com/fr-FR/paris-mob-programming/). C'est gratuit. Si vous voulez participer à une équipe qui se passe bien dans un espace sécurisant, c'est le bon endroit !
