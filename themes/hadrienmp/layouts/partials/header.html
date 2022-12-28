@@ -6,7 +6,7 @@
             <i class="las la-bars"></i>
         </label>
         <nav>
-            {{- $currentPage := . -}}
+            {{ $currentPage := . }}
             {{ range .Site.Menus.main -}}
 
                 {{ $activeClass := "" }}

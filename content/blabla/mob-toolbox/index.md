@@ -2,6 +2,7 @@
 title: Mob Programming Toolbox
 description: ""
 date: 2022-04-26T16:54:40.798Z
+type: conference
 layout: side-preview
 preview: 
     url: "2022-devoxx.jpeg"

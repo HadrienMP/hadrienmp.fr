@@ -17,6 +17,11 @@
             {{ $target = "_blank" }}
             <p class="external">External</p>
         {{ end }}
+        {{ if eq .Params.Type "podcast" }}
+            <div class="type"><i class="las la-podcast"></i> Podcast</div>
+        {{ else if eq .Params.Type "conference" }}
+            <div class="type"><i class="las la-video"></i> Conférence</div>
+        {{ end }}
         <a href="{{ $link }}" target="{{ $target }}">
             {{ with .Resources.GetMatch .Params.Preview.Url }}
             {{ with .Resize (printf "%dx%d webp" .Width .Height) }}

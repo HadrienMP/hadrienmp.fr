@@ -3,23 +3,9 @@ languageCode: 'fr-fr'
 title: 'HadrienMP'
 theme: 'hadrienmp'
 
-menu:
-  main:
-  - identifier: blogs
-    name: Blog
-    pre: <i class="las la-book"></i>
-    url: /blog/
-    weight: 3
-  - identifier: apps
-    name: Apps
-    pre: <i class="las la-book"></i>
-    url: /app/
-    weight: 3
-  - identifier: blabla
-    name: Blabla
-    pre: <i class="las la-book"></i>
-    url: /blabla/
-    weight: 3
+
+sectionPagesMenu: main
+
 
 
 params:

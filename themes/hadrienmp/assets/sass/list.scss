@@ -22,7 +22,17 @@ ul.list {
             right: 1rem;
             border-radius: 5px;
             background-color: var(--color-link);
+            color: var(--color-accent-text);
             padding: 0.4rem 1rem;
+        }
+        .type {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            border-radius: 5px;
+            background-color: var(--color-link);
+            color: var(--color-accent-text);
+            padding: 0.4rem;
         }
 
         &:hover {

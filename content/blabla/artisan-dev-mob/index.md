@@ -3,6 +3,7 @@ title: Mob Programming @Artisan Développeur
 description: ""
 date: 2022-09-26T16:54:40.798Z
 layout: side-preview
+type: podcast
 preview: 
     url: "mob-artisan-developpeur.jpeg"
     description: L'image de présentation de la saison 8 du podcast Artisan développeur. Benoit en premier plan.
