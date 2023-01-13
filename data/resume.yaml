@@ -28,7 +28,7 @@ basics:
       url: 'https://github.com/HadrienMP'
 work:
   - name: Sunday
-    position: Développeur
+    position: Développeur Senior
     startDate: '2021-04-30'
     endDate: '2022-09-30'
     highlights: 
@@ -41,35 +41,28 @@ work:
     - Kafka
     - GCP
     summary: |-
-      Sunday est une entreprise de paiement en restaurant. Un QR Code sur la table permet de voir son addition, la partager entre
+      Sunday est une entreprise de paiement présente dans des centaines de restaurants dans le monde. Un QR Code sur la table permet de voir son addition, la partager entre
       convives et la payer.  
       <br>
-
-
-      - Mise en place du framework __CQRS et Event Sourcing__
-      - __Formation au refactoring__ dans un contexte de programmation fonctionnelle
-      (suite de tutoriels exemples)
-      - Développement de l'application B2C, en particulier la gestion des taxes,
-      des reçus et des comptes clients. 
-      - __Coaching__ Mob/Pair et pratiques de développement "trunk based", lean et
-      eXtreme Programming (BDD, DDD et TDD)
+      Je suis arrivé pour réécrire l'application en Java et React. J'ai mis en place l'architecture __CQRS et Event Sourcing__.
+      Formé mes coééquipiers à la programmation fonctionnelle, le trunk based development, Mob et Pair programming.
     url: 'https://sundayapp.com/'
     location: 'Nantes, Pays de la Loire, France'
   - name: La Combe du Lion Vert
     position: Coach Craft
     startDate: '2017-04-01'
     endDate: '2022-04-30'
-    highlights: []
-    summary: |
-      La combe du lion vert est une ESN parisienne spécialisée dans le Software Craft.  
-  
-      <br>J'interviens dans leur cycle de formation des employés sur les thèmes suivants :
+    highlights:
       - Test Driven Development
+      - Mob Programming
       - Refactoring
       - Design Objet
       - Gestion de legacy
       - Example Mapping
       - Event Storming
+    summary: |
+      La combe du lion vert est une ESN parisienne spécialisée dans le Software Craft.
+      J'intervenais chez eux pour former leurs équipes sur mes sujets d'expertise
     url: 'https://www.linkedin.com/company/arolla/'
     location: Paris
   - name: Arolla
@@ -83,24 +76,12 @@ work:
     - TDD
     - Mob Programming
     summary: |-
-      En charge du développement et de la maintenant de la solution Fairways
-      Garantie. C'est un logiciel de gestion des garanties professionnelles.  
-      <br>  
-      - Clients grand comptes dans le BTP, l'énergie etc.
-      - 200 000 Lignes de code  
-      <br>  
-      - Introduction du __Mob Programming__
-        - Augmentation de la prédictibilité
-        - Réduction des défauts à un niveau proche de zéro
-        - Augmentation de la cadence de mise en production
-      - Mise en place de nouvelles fonctionnalités et résolution de bugs.
-      - Amélioration de la qualité de l'architecture et du code grâce : 
-        - aux designs patterns classiques et à __Domain Driven Design__
-        - au renforcement des principes de l'orienté objet
-        - à l'introduction de pratiques de programmation fonctionnelle
-      - Amélioration des performances de l'application avec __CQRS__: 
-        - introduction de caches rafraichis en asynchrone 
-        - précalculs de modèles de lecture
+      Finance Active est une Fintech parisienne. J'intervenais sur la solution Fairways
+      Garantie. C'est un logiciel de gestion des garanties professionnelles. Cette solution
+      est utilisée par des clients grand comptes dans le BTP, l'énergie etc.  
+      <br>
+      Nous avons travaillé à stabiliser la plateforme, augmenter le delivery et régler les gros 
+      soucis de performance. Notamment grâce à l'introduction du __Mob Programming__ et de __CQRS__.
     url: 'https://www.linkedin.com/company/arolla/'
     location: Paris
   - name: Arolla
@@ -149,12 +130,6 @@ work:
       - Le conseil général des hauts de seine, je gérais leurs sites portails
       pour divers événements
     url: 'https://www.linkedin.com/company/soprasteria/'
-volunteer:
-  - organisation: Meetup Mob Programming Francophone
-    position: Cofondateur
-    url: https://www.meetup.com/fr-FR/paris-mob-programming/
-    startDate: 2020-04-07
-    summary: Ce meetup en ligne explore la programmation en équipe. Nous proposons des introductions à la pratique, un espace safe pour le pratiquer et des expérimentations.
 education:
   - institution: IMT Mines Albi
     area: Génie des Systèmes d'Information
@@ -170,12 +145,19 @@ skills:
   - name : Craft
     level: 5/5
     keywords:
-      - Test Driven Development
-      - Behaviour Driven Development
-      - Domain Driven Design
+      - TDD
+      - BDD
+      - DDD
       - Refactoring
       - Legacy remediation
-      - Trunk based development
+      - Trunk Based
+  - name : Architecture
+    level: 5/5
+    keywords:
+      - CQRS
+      - Microservices
+      - Hexagonale
+      - Lambda core
   - name: Conception
     level: 5/5
     keywords: 
@@ -218,27 +200,20 @@ languages:
   - fluency: Notions
     language: Allemand
     level: 2
-  - fluency: Notions
+  - fluency: Intermédiaire
     language: Toki Pona
     level: 2
 interests:
   - name: Meetups
     keywords: 
+      - Animation du meetup de Mob Français
       - Software Crafters Nantes et Rennes
       - Human Talks
       - Elm Online
-  - name: Création de musique
+  - name: Autre
     keywords:
-      - Rock
-      - Électro
-  - name: Sports de glisse
-    keywords:
-      - Roller
-      - Skate
-      - Planche à voile
-      - Ski
-  - name: Autres
-    keywords:
+      - Musique (Écouter et créer)
+      - Sports de glisse
       - Crochet
       - Séries
 references: []
