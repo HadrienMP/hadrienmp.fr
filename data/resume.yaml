@@ -1,0 +1,249 @@
+$schema: 'https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json'
+basics:
+  name: Hadrien __MENS-PELLEN__
+  label: Fullstack Software Crafter
+  image: >-
+    https://hadrienmp.fr/images/ProfilDFuck_hucb44b0d7046e662e04355d743d65e4a5_387620_200x200_resize_q75_h1_box_3.webp
+  email: pro@hadrienmp.fr
+  phone: ''
+  url: 'https://hadrienmp.fr'
+  summary: >-
+    Développeur passionné, expérimenté en Java, Elm et Typescript. TDD addict,
+    Agiliste et Craftsman freak
+  location:
+    countryCode: FR
+    address: Nantes
+  profiles:
+    - network: LinkedIn
+      username: hadrien-mens-pellen-39071231
+      url: 'https://www.linkedin.com/in/hadrien-mens-pellen-39071231/'
+    - network: Twitter
+      username: HadrienMP
+      url: 'https://twitter.com/hadrienmp'
+    - network: Mastodon
+      username: '@HadrienMP@mastodon.top'
+      url: 'https://mastodon.top/@hadrienmp'
+    - network: Github
+      username: HadrienMP
+      url: 'https://github.com/HadrienMP'
+work:
+  - name: Sunday
+    position: Développeur
+    startDate: '2021-04-30'
+    endDate: '2022-09-30'
+    highlights: 
+    - TDD
+    - DDD
+    - Trunk Based Development
+    - React
+    - Java 11
+    - Spring Boot
+    - Kafka
+    - GCP
+    summary: |-
+      Sunday est une entreprise de paiement en restaurant. Un QR Code sur la table permet de voir son addition, la partager entre
+      convives et la payer.  
+      <br>
+
+
+      - Mise en place du framework __CQRS et Event Sourcing__
+      - __Formation au refactoring__ dans un contexte de programmation fonctionnelle
+      (suite de tutoriels exemples)
+      - Développement de l'application B2C, en particulier la gestion des taxes,
+      des reçus et des comptes clients. 
+      - __Coaching__ Mob/Pair et pratiques de développement "trunk based", lean et
+      eXtreme Programming (BDD, DDD et TDD)
+    url: 'https://sundayapp.com/'
+    location: 'Nantes, Pays de la Loire, France'
+  - name: La Combe du Lion Vert
+    position: Coach Craft
+    startDate: '2017-04-01'
+    endDate: '2022-04-30'
+    highlights: []
+    summary: |
+      La combe du lion vert est une ESN parisienne spécialisée dans le Software Craft.  
+  
+      <br>J'interviens dans leur cycle de formation des employés sur les thèmes suivants :
+      - Test Driven Development
+      - Refactoring
+      - Design Objet
+      - Gestion de legacy
+      - Example Mapping
+      - Event Storming
+    url: 'https://www.linkedin.com/company/arolla/'
+    location: Paris
+  - name: Arolla
+    position: Développeur @Finance Active
+    startDate: '2017-11-30'
+    endDate: '2022-04-30'
+    highlights:
+    - Java 8
+    - Tapestry
+    - CQRS
+    - TDD
+    - Mob Programming
+    summary: |-
+      En charge du développement et de la maintenant de la solution Fairways
+      Garantie. C'est un logiciel de gestion des garanties professionnelles.  
+      <br>  
+      - Clients grand comptes dans le BTP, l'énergie etc.
+      - 200 000 Lignes de code  
+      <br>  
+      - Introduction du __Mob Programming__
+        - Augmentation de la prédictibilité
+        - Réduction des défauts à un niveau proche de zéro
+        - Augmentation de la cadence de mise en production
+      - Mise en place de nouvelles fonctionnalités et résolution de bugs.
+      - Amélioration de la qualité de l'architecture et du code grâce : 
+        - aux designs patterns classiques et à __Domain Driven Design__
+        - au renforcement des principes de l'orienté objet
+        - à l'introduction de pratiques de programmation fonctionnelle
+      - Amélioration des performances de l'application avec __CQRS__: 
+        - introduction de caches rafraichis en asynchrone 
+        - précalculs de modèles de lecture
+    url: 'https://www.linkedin.com/company/arolla/'
+    location: Paris
+  - name: Arolla
+    position: Développeur @Darty
+    startDate: '2016-02-28'
+    endDate: '2017-11-30'
+    highlights: 
+    - TDD
+    - Java 8
+    - Dropwizard
+    - Guice
+    - Web Services REST
+    summary: |-
+      Développeur sur les webservices back de __Darty.com__.
+      - 1 000 000 de lignes de code
+      - Plusieurs millions de chiffre d'affaire / jour  
+      <br> 
+      - Lead developer de la refonte de l'espace client  
+      - Déploiement dans l'équipe de pratiques Agiles et Craft
+    url: 'https://www.linkedin.com/company/arolla/'
+    location: Bagnolet
+
+  - name: Sopra Steria
+    position: Développeur
+    startDate: '2010-02-01'
+    endDate: '2016-01-31'
+    highlights: 
+      - Java
+      - Hibernate
+      - Spring
+      - Struts
+      - Liferay
+    summary: |-
+      Développeur et Lead technique chez divers clients dans le Secteur public
+      :  
+      - Le __ministère de l'intérieur__ sur le système de __partage des
+      informations policières de l'espace Schengen__.  
+        - Volume de transactions important (milliers par minutes)  
+        - Exigence de fiabilité  
+      - Le __ministère des finances__  
+        - Reprise de contrôle sur la solution de supervision qui était en échec  
+          - Stabilisation  
+          - Documentation  
+        - Mise en place du système de déclaration des factures de l'état  
+      - France Agrimer, gestion des subventions aux écoles  
+      - Le conseil général des hauts de seine, je gérais leurs sites portails
+      pour divers événements
+    url: 'https://www.linkedin.com/company/soprasteria/'
+volunteer:
+  - organisation: Meetup Mob Programming Francophone
+    position: Cofondateur
+    url: https://www.meetup.com/fr-FR/paris-mob-programming/
+    startDate: 2020-04-07
+    summary: Ce meetup en ligne explore la programmation en équipe. Nous proposons des introductions à la pratique, un espace safe pour le pratiquer et des expérimentations.
+education:
+  - institution: IMT Mines Albi
+    area: Génie des Systèmes d'Information
+    studyType: Ingénieur procédés
+    startDate: '2006-12-31'
+    endDate: '2010-12-31'
+    score: ''
+    courses: []
+awards: []
+certificates: []
+publications: []
+skills:
+  - name : Craft
+    level: 5/5
+    keywords:
+      - Test Driven Development
+      - Behaviour Driven Development
+      - Domain Driven Design
+      - Refactoring
+      - Legacy remediation
+      - Trunk based development
+  - name: Conception
+    level: 5/5
+    keywords: 
+      - Object
+      - Fonctionnel
+      - Calisthenics
+      - SOLID
+      - Design Patterns
+      - Simple Design
+  - name: Backend
+    level: 5/5
+    keywords: 
+      - Java
+      - NodeJs
+      - Spring
+      - Hibernate
+  - name: Frontend
+    level: 4/5
+    keywords:
+      - Elm
+      - React
+      - Html
+      - Css
+      - Sass
+  - name: Agile
+    level: 4/5
+    keywords:
+      - Mob/Pair Programming
+      - Scrum
+      - Kanban
+      - Lean
+
+languages:
+  - language: Français
+    fluency: Langue Maternelle
+    level: 5
+  - fluency: Fluide
+    language: Anglais
+    level: 4
+  - fluency: Notions
+    language: Allemand
+    level: 2
+  - fluency: Notions
+    language: Toki Pona
+    level: 2
+interests:
+  - name: Meetups
+    keywords: 
+      - Software Crafters Nantes et Rennes
+      - Human Talks
+      - Elm Online
+  - name: Création de musique
+    keywords:
+      - Rock
+      - Électro
+  - name: Sports de glisse
+    keywords:
+      - Roller
+      - Skate
+      - Planche à voile
+      - Ski
+  - name: Autres
+    keywords:
+      - Crochet
+      - Séries
+references: []
+projects: []
+meta:
+  version: v1.0.0
+  theme: onepage
+  canonical: 'https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json'

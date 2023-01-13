@@ -1,0 +1,473 @@
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-weight: normal;
+        }
+
+        html {
+            font-size: 10pt;
+        }
+
+        body {
+            padding: 1rem;
+            font-family: 'Times New Roman', Times, serif;
+            --border: rgb(226, 222, 222);
+            --border-width: 2px;
+        }
+
+        @media screen {
+            html {
+                background: #f9f9f9;
+            }
+
+            body {
+                max-width: 21cm;
+                margin: 1rem auto;
+                border: var(--border-width) solid var(--border);
+                background: white;
+            }
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        section {
+            margin-top: 3rem;
+            border-top: var(--border-width) solid var(--border);
+            position: relative;
+            padding-top: 2.6rem;
+        }
+
+        section .title {
+            font-size: 1.2rem;
+            font-weight: lighter;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translateY(-50%) translateX(-50%);
+            width: fit-content;
+            background-color: var(--border);
+            padding: .4rem 1rem;
+            text-transform: uppercase;
+        }
+
+
+        li {
+            list-style-type: none;
+        }
+
+
+        /* ------------------------- */
+        /* Line List */
+        /* ------------------------- */
+        ul.line-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0 .6rem;
+        }
+
+        ul.line-list li {
+            list-style-type: circle;
+            margin-left: 1rem;
+        }
+
+        /* ------------------------- */
+
+        #contacts .content {
+            display: flex;
+            gap: 4rem;
+        }
+
+        .contact {
+            display: flex;
+            gap: .6rem;
+        }
+
+        /* ------------------------- */
+        /* Level */
+        /* ------------------------- */
+        .level {
+            background: #eee;
+            border-radius: 5px;
+            overflow: hidden;
+            height: .4rem;
+        }
+
+        .level-2 {
+            background: black;
+            width: 40%;
+            height: 100%;
+        }
+
+        .level-3 {
+            background: black;
+            width: 60%;
+            height: 100%;
+        }
+
+        .level-4 {
+            background: black;
+            width: 80%;
+            height: 100%;
+        }
+
+        .level-5 {
+            background: black;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    {{ with (index .Site.Data "resume") }}
+    <aside id="left">
+        <style>
+            header {
+                margin: 1rem 0 5rem;
+                display: flex;
+                align-items: center;
+                padding-left: 30%;
+            }
+
+            h1 {
+                font-size: 2rem;
+                text-align: center;
+                flex: 1;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+                text-align: center;
+                font-weight: lighter;
+                letter-spacing: 2.6px;
+                color: rgb(64, 64, 64);
+                font-weight: bold;
+            }
+
+            header section {
+                margin: 0;
+                border: none;
+                padding: 0;
+            }
+
+            header #main {
+                border-left: var(--border-width) solid var(--border);
+                border-right: var(--border-width) solid var(--border);
+                padding: 0 2rem;
+                display: flex;
+                flex-direction: column;
+                gap: .4rem;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #contact {
+                flex: 1;
+                text-align: right;
+            }
+        </style>
+        <header>
+            <div id="main">
+                <h1>{{ .basics.name | markdownify }}</h1>
+                <h2>{{ .basics.label }}</h2>
+            </div>
+
+            <section id="contact">
+                <p><a href="mailto:{{ .basics.email }}" target="_blank">{{ .basics.email }}</a></p>
+                <p><a href="{{ .basics.url }}" target="_blank">{{ .basics.url }}</a></p>
+                <p>{{ .basics.location.address }}, {{ .basics.location.countryCode }}</p>
+            </section>
+        </header>
+        </section>
+
+    </aside>
+
+    <main>
+        <style>
+            #skills .content {
+                display: flex;
+                flex-direction: column;
+                gap: .4rem;
+                justify-content: space-between;
+            }
+
+            .skill {
+                display: flex;
+                gap: 1rem;
+            }
+
+            .skill-name {
+                font-weight: bold;
+                width: 2cm;
+            }
+
+            .skill .details {
+                flex: 1;
+            }
+        </style>
+        <section id="skills">
+            <div class="title">Compétences</div>
+            <div class="content">
+                {{ range .skills }}
+                <div class="skill">
+                    <p class="skill-name">{{ .name }}</p>
+                    <div class="details">
+                        <ul class="line-list">
+                            {{ range .keywords }}
+                            <li>{{ . }}</li>
+                            {{ end }}
+                            </p>
+                    </div>
+
+                </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <style>
+            #experiences .content {
+                column-count: 2;
+                column-gap: 4rem;
+                column-rule: var(--border-width) double var(--border);
+            }
+
+            .experience {
+                display: flex;
+                flex-direction: column;
+                gap: .6rem;
+                border-top: var(--border-width) dashed var(--border);
+                padding: 1rem 0;
+            }
+
+            .experience:first-child {
+                padding-top: 0;
+                border: none;
+            }
+
+            .experience .header {
+                display: flex;
+            }
+
+            .experience .position {
+                font-weight: bold;
+            }
+
+            .experience .company::before {
+                content: "@";
+            }
+
+            .experience .company {
+                margin-left: 1rem;
+            }
+
+            .experience .dates {
+                flex: 1;
+                font-style: italic;
+                text-align: right;
+            }
+
+
+            .experience .summary li {
+                list-style: "-";
+                margin-left: 1rem;
+                padding-left: 1rem;
+            }
+        </style>
+        <section id="experiences">
+            <div class="title">Expériences</div>
+            <div class="content">
+                {{ range .work }}
+                <div class="experience">
+                    <div class="header">
+                        <div class="position">{{ .position }}</div>
+                        <div class="company">{{ .name }}</div>
+                        <div class="dates">
+                            {{ .startDate | time.Format "01/2006" }}
+                            {{ if (isset . "endDate") }}
+                            - {{ .endDate | time.Format "01/2006" }}
+                            {{ else }}
+                            à maintenant
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ if (.highlights) }}
+                    <ul class="experience-higlights line-list">
+                        {{ range .highlights }}
+                        <li class="highlight">{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                    {{ if .summary }}
+                    <div class="summary">
+                        {{ .summary | markdownify }}
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <section id="volunteer">
+            <div class="title">Bénévolat</div>
+            <div class="content">
+                {{ range .volunteer }}
+                <div class="experience">
+                    <div class="header">
+                        <div class="position">{{ .position }}</div>
+                        <div class="company">{{ .organisation }}</div>
+                        <div class="dates">
+                            {{ .startDate | time.Format "01/2006" }}
+                            {{ if (isset . "endDate") }}
+                            - {{ .endDate | time.Format "01/2006" }}
+                            {{ else }}
+                            à maintenant
+                            {{ end }}
+                        </div>
+                    </div>
+                    {{ if (.highlights) }}
+                    <ul class="experience-higlights line-list">
+                        {{ range .highlights }}
+                        <li class="highlight">{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                    {{ if .summary }}
+                    <div class="summary">
+                        {{ .summary | markdownify }}
+                    </div>
+                    {{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <style>
+            .education {
+                display: flex;
+            }
+
+            .education-type {
+                font-weight: bold;
+            }
+
+            .education .dates {
+                flex: 1;
+                font-style: italic;
+                text-align: right;
+                min-width: 10rem;
+            }
+
+            .education-institution {
+                font-style: italic;
+            }
+        </style>
+        <section id="education">
+            <div class="title">Formation</div>
+            <div class="content">
+                {{ range .education }}
+                <div class="education">
+                    <div>
+                        <p class="education-type">{{ .studyType }}</p>
+                        <p class="education-area">{{ .area }}</p>
+                        <p class="education-institution">{{ .institution }}</p>
+                    </div>
+                    <div class="dates">
+                        {{ .startDate | time.Format "2006" }}
+                        {{ if (isset . "endDate") }}
+                        - {{ .endDate | time.Format "2006" }}
+                        {{ else }}
+                        à maintenant
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <style>
+            #languages .content {
+                display: flex;
+                gap: 2rem;
+            }
+
+            .language {
+                flex: 1;
+            }
+
+            .language-header {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+
+            .language-name {
+                font-weight: bold;
+            }
+
+            .language-fluency {
+                font-size: .9rem;
+            }
+        </style>
+        <section id="languages">
+            <div class="title">Langues</div>
+            <div class="content">
+                {{ range .languages }}
+                <div class="language">
+                    <div class="language-header">
+                        <p class="language-name">{{ .language }}</p>
+                        <p class="language-fluency">{{ .fluency }}</p>
+                    </div>
+                    <div class="level">
+                        <div class="level-{{ substr .level 0 1 }}"></div>
+                    </div>
+
+                </div>
+                {{ end }}
+            </div>
+        </section>
+
+        <style>
+            #interests .content {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .interest {
+                max-width: 23%;
+            }
+
+            .interest-name {
+                font-weight: bold;
+            }
+        </style>
+        <section id="interests">
+            <div class="title">Intérêts</div>
+            <div class="content">
+                {{ range .interests }}
+                <div class="interest">
+                    <p class="interest-name">{{ .name }}</p>
+                    <ul class="line-list">
+                        {{ range .keywords }}
+                        <li>{{ . }}</li>
+                        {{ end }}
+                    </ul>
+                </div>
+                {{ end }}
+            </div>
+        </section>
+    </main>
+
+
+    {{ end }}
+</body>
+
+</html>
