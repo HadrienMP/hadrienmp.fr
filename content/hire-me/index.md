@@ -9,19 +9,17 @@ categories: ""
 layout: side-preview
 menu: 
     main:
-        weight: 5
+        weight: 6
 cta: true
 ---
-## Développement
-Vous avez besoin d'aide pour créér ou maintenir votre produit ? J'apporte mon expertise technique et technologie pour vous permettre faire durer votre code dans le temps.
+Vous avez besoin d'aide pour créér ou maintenir votre produit ? J'apporte mon expertise technique et technologie pour vous permettre __faire durer votre produit et votre équipe dans le temps__.
 
-Contactez-moi par mail, je peux intervenir en mission courte comme longue en fonction de vos besoins.
-
-## Coaching
-Mes sujets d'expertise en coaching :
-- __Test Driven Development__. Cette technique améliore la qualité du design interne, réduit les bugs et fournit une excellente couverture automatique de non régression
-- Coopération efficace, à deux ou plus. Je pratique et forme au __pair et mob programming__. Cette technique détruit les silos de connaissances grâce à la propriété collective du code. Elle réduit également les bugs grâce à la revue de code continue.
-
+- <a href="/cv" target="_blank"><i class="las la-file medium-icon"></i> Voir mon CV</a>
+- <a href="http://www.linkedin.com/pub/hadrien-mens-pellen/31/712/390" target="_blank">
+    <i class="lab la-linkedin medium-icon"></i> 
+    Plus sur Linked In
+    </a>
+- <a href="https://calendly.com/hadrienmp/prise-de-contact" target="_blank"><i class="las la-calendar-plus medium-icon"></i></i> M'embaucher !</a>
 
 ## Brown Bag Lunch
 Les Brown Bag Lunch sont des évènements techniques peu chers. 

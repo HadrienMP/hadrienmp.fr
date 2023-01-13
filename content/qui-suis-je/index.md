@@ -31,6 +31,6 @@ Je suis passionné par le __craft__ depuis longtemps, ce qui m’a amené à pra
 - Design Objet
 - Design Fonctionnel
 
-<br/>
+<br>
 
-<a href="http://www.linkedin.com/pub/hadrien-mens-pellen/31/712/390" class="cta" target="_blank">Plus sur Linked In</a>
+<a href="/hire-me" class="cta">Embauchez-moi !</a>

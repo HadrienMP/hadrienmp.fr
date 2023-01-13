@@ -13,10 +13,10 @@ menu:
     title: Blog
     url: /article/
     weight: 2
-  - identifier: blabla
-    name: BlaBla
-    title: BlaBla
-    url: /blabla/
+  - identifier: talk
+    name: Talks
+    title: Talks
+    url: /talk/
     weight: 3
   - identifier: app
     name: Apps
