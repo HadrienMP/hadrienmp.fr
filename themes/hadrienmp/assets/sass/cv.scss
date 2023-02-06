@@ -109,7 +109,6 @@ aside {
     padding: 1.6rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
     color: var(--aside-text-color);
 }
 
@@ -118,8 +117,12 @@ aside a {
 }
 
 aside section {
+    margin-top: 3rem;
     border-top: 1px solid var(--aside-border-color);
     position: relative;
+    @media print {
+        page-break-inside: avoid;
+    }
 }
 
 aside section .title {
@@ -261,6 +264,9 @@ main section .title {
     border-top: var(--border-width) dashed var(--border);
     padding: 1rem 2rem;
     text-align: justify;
+    @media print {
+        page-break-inside: avoid;
+    }
 }
 
 .experience:first-child {

@@ -4,6 +4,15 @@
     {{ $sass := resources.Get "sass/cv.scss" }}
     {{ $style := $sass | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    <style>
+        #languages {
+            page-break-before: always;
+        }
+
+        main {
+            height: max-content;
+        }
+    </style>
 </head>
 
 <body>
