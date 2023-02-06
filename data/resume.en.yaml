@@ -1,0 +1,227 @@
+$schema: 'https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json'
+basics:
+  name: Hadrien __MENS-PELLEN__
+  label: Fullstack Software Crafter
+  image: >-
+    https://hadrienmp.fr/images/ProfilDFuck_hucb44b0d7046e662e04355d743d65e4a5_387620_200x200_resize_q75_h1_box_3.webp
+  email: pro@hadrienmp.fr
+  phone: ''
+  url: 'https://hadrienmp.fr'
+  summary: >-
+    Développeur passionné, expérimenté en Java, Elm et Typescript. TDD addict,
+    Agiliste et Craftsman freak
+  location:
+    countryCode: FR
+    address: Nantes
+  profiles:
+    - network: LinkedIn
+      username: hadrien-mens-pellen-39071231
+      url: 'https://www.linkedin.com/in/hadrien-mens-pellen-39071231/'
+    - network: Twitter
+      username: HadrienMP
+      url: 'https://twitter.com/hadrienmp'
+    - network: Mastodon
+      username: '@HadrienMP@mastodon.top'
+      url: 'https://mastodon.top/@hadrienmp'
+    - network: Github
+      username: HadrienMP
+      url: 'https://github.com/HadrienMP'
+work:
+  - name: XCG Consulting
+    position: Elm Developer
+    startDate: '2022-11-01'
+    endDate: '2022-12-01'
+    highlights: 
+    - Elm
+    - Elm-ui
+    - Elm-spa
+    - Elm-forms
+    - Elm-test
+    - Material Design
+    - Mercurial
+    - Cypress
+    - Nix
+    summary: |-
+      XCG edits a web API for document conversion: Redner. It takes a template and datasource to create well formed email, pdfs, html etc.
+
+      I developped the front-end of the webservice to allow registration to the API, user management etc. It was used to demonstrate the API in conferences.
+    url: https://www.linkedin.com/company/sundaytech/
+    location: Nantes, Pays de la Loire, France
+  - name: Sunday
+    position: Senior Fullstack Developer
+    startDate: '2021-04-30'
+    endDate: '2022-09-30'
+    highlights: 
+    - TDD
+    - DDD
+    - Trunk Based Development
+    - React
+    - Java 11
+    - Spring Boot
+    - Kafka
+    - GCP
+    summary: |-
+      Sunday is a mobile app that allows restaurant customers to split and pay their bill without leaving their table.   
+      <br>
+      I was hired, with a senior team, to rewrite the whole app in Java and React. The previous prototype proved very hard to evolve. 
+      I implemented the building blocks for our chosen architecture : __Micro Services, CQRS and Event Sourcing__.
+      I trained my teamates in functional style programming, trunk based developement, mob and pair programming.
+      <br>  
+      Although the majority of my time I spent working on the mobile web front end in React. Especially: taxes, receipts, authentication and customer space.
+    url: 'https://sundayapp.com/'
+    location: 'Nantes, Pays de la Loire, France'
+  - name: La Combe du Lion Vert
+    position: Craft Coach
+    startDate: '2017-04-01'
+    endDate: '2022-04-30'
+    highlights:
+      - Test Driven Development
+      - Mob Programming
+      - Refactoring
+      - Design Objet
+      - Gestion de legacy
+      - Example Mapping
+      - Event Storming
+    summary: |
+      This parisian software consulting firm hired me to coach their new employees on the craft practices I master.
+    url: 'https://www.linkedin.com/company/arolla/'
+    location: Paris
+  - name: Finance Active
+    position: Senior Developer
+    startDate: '2017-11-30'
+    endDate: '2022-04-30'
+    highlights:
+    - Java 8
+    - Tapestry
+    - CQRS
+    - TDD
+    - Mob Programming
+    summary: |-
+      Finance Active is a parisian Fintech. I worked on "Fairways Guarantees", a software to manage professional guarantees. 
+      It was used by big companies in construction, energy, recycling as well as cities and banks.
+      <br>  
+      We focused on performance to handle a big increase in users and data. Implementing __CQRS__ helped divide by 10 page loading times. 
+      We also __accelerated the delivery__ and reduced the bug frequency by switching to full time __Mob Programming__.
+    url: 'https://www.linkedin.com/company/arolla/'
+    location: Paris
+  - name: Darty
+    position: Developer
+    startDate: '2016-02-28'
+    endDate: '2017-11-30'
+    highlights: 
+    - TDD
+    - Java 8
+    - Dropwizard
+    - Guice
+    - Web Services REST
+    summary: |-
+      Darty is a big electronics retail firm in France. I worked on the backends of their website.
+      - 1 000 000 lines of code
+      - Millions of turnover per day
+      <br> 
+      - Lead developer of their new customer space  
+    url: 'https://www.linkedin.com/company/arolla/'
+    location: Bagnolet
+
+  - name: Sopra Steria
+    position: Développeur
+    startDate: '2010-02-01'
+    endDate: '2016-01-31'
+    highlights: 
+      - Java
+      - Hibernate
+      - Spring
+      - Struts
+      - Liferay
+    summary: |-
+      I worked for customer in the public sector such as ministry of finance and ministry of interior. I took lead developer roles in training apprentices and more junior employees.
+    url: 'https://www.linkedin.com/company/soprasteria/'
+education:
+  - institution: IMT Mines Albi
+    area: Information systems engineering
+    studyType: Process engineer
+    startDate: '2006-12-31'
+    endDate: '2010-12-31'
+    score: ''
+    courses: []
+awards: []
+certificates: []
+publications: []
+skills:
+  - name : Craft
+    level: 5/5
+    keywords:
+      - TDD
+      - BDD
+      - DDD
+      - Refactoring
+      - Legacy remediation
+      - Trunk Based
+  - name : Architecture
+    level: 5/5
+    keywords:
+      - CQRS
+      - Microservices
+      - Hexagonal
+      - Lambda core
+  - name: Conception
+    level: 5/5
+    keywords: 
+      - Object
+      - Fonctionnel
+      - Calisthenics
+      - SOLID
+      - Design Patterns
+      - Simple Design
+  - name: Backend
+    level: 5/5
+    keywords: 
+      - Java
+      - NodeJs
+      - Spring
+      - Hibernate
+  - name: Frontend
+    level: 4/5
+    keywords:
+      - Elm
+      - React
+      - Html
+      - Css
+      - Sass
+  - name: Agile
+    level: 4/5
+    keywords:
+      - Mob/Pair Programming
+      - Scrum
+      - Kanban
+      - Lean
+
+languages:
+  - language: French
+    fluency: Native
+    level: 5
+  - fluency: Fluent
+    language: English
+    level: 4
+  - fluency: Elementary
+    language: German
+    level: 2
+interests:
+  - name: Meetups
+    keywords: 
+      - Host the french speaking mob programming meetup
+      - Software Crafters Nantes, Rennes and Paris
+      - Human Talks
+      - Elm Online
+  - name: Other
+    keywords:
+      - Music (Listening and creating)
+      - Roller, skate, windsurf
+      - Crochet
+      - TV series
+references: []
+projects: []
+meta:
+  version: v1.0.0
+  theme: onepage
+  canonical: 'https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json'

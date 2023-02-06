@@ -3,6 +3,13 @@ languageCode: 'fr-fr'
 title: 'HadrienMP'
 theme: 'hadrienmp'
 
+defaultContentLanguage: fr
+languages:
+  fr:
+    weight: 1
+  en:
+    weight: 3
+
 
 sectionPagesMenu: main
 

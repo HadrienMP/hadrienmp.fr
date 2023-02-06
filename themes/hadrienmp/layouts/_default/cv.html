@@ -4,10 +4,16 @@
     {{ $sass := resources.Get "sass/cv.scss" }}
     {{ $style := $sass | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    <style>
+        body {
+            height: 29.7cm;
+        }
+    </style>
 </head>
 
 <body>
-    {{ with (index .Site.Data "resume") }}
+    {{ $source := .Site.Language.Lang | printf "%s.%s" "resume" }}
+    {{ with (index .Site.Data $source) }}
     <aside>
         <header>
             <h1>{{ .basics.name | markdownify }}</h1>
@@ -23,7 +29,7 @@
             </div>
         </section>
         <section id="skills">
-            <div class="title">Compétences</div>
+            <div class="title">{{ i18n "skills" }}</div>
             <div class="content">
                 {{ range .skills }}
                 <div class="skill">
@@ -41,7 +47,7 @@
             </div>
         </section>
         <section id="education">
-            <div class="title">Formation</div>
+            <div class="title">{{ i18n "training" }}</div>
             <div class="content">
                 {{ range .education }}
                 <div class="education">
@@ -65,7 +71,7 @@
             </div>
         </section>
         <section id="languages">
-            <div class="title">Langues</div>
+            <div class="title">{{ i18n "languages" }}</div>
             <div class="content">
                 {{ range .languages }}
                 <div class="language">
@@ -76,7 +82,7 @@
             </div>
         </section>
         <section id="interests">
-            <div class="title">Intérêts</div>
+            <div class="title">{{ i18n "interests" }}</div>
             <div class="content">
                 {{ range .interests }}
                 <div class="interest">
