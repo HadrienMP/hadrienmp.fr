@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    {{ with (index .Site.Data "resume") }}
+    {{ with (index .Site.Data "full-resume") }}
     <aside>
         <header>
             <h1>{{ .basics.name | markdownify }}</h1>
@@ -22,6 +22,7 @@
                 <p>{{ .basics.location.address }}, {{ .basics.location.countryCode }}</p>
             </div>
         </section>
+
         <section id="skills">
             <div class="title">Compétences</div>
             <div class="content">
@@ -40,6 +41,7 @@
                 {{ end }}
             </div>
         </section>
+
         <section id="education">
             <div class="title">Formation</div>
             <div class="content">
@@ -64,6 +66,7 @@
                 {{ end }}
             </div>
         </section>
+
         <section id="languages">
             <div class="title">Langues</div>
             <div class="content">
@@ -75,6 +78,7 @@
                 {{ end }}
             </div>
         </section>
+
         <section id="interests">
             <div class="title">Intérêts</div>
             <div class="content">

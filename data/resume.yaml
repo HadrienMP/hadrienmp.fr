@@ -41,11 +41,13 @@ work:
     - Kafka
     - GCP
     summary: |-
-      Sunday est une entreprise de paiement présente dans des centaines de restaurants dans le monde. Un QR Code sur la table permet de voir son addition, la partager entre
-      convives et la payer.  
+      Sunday est une application qui permet de payer son addition à table, de la partager entre convives et même de commander.  
       <br>
       Je suis arrivé pour réécrire l'application en Java et React. J'ai mis en place l'architecture __CQRS et Event Sourcing__.
-      Formé mes coééquipiers à la programmation fonctionnelle, le trunk based development, Mob et Pair programming.
+      Formé mes coééquipiers à la programmation fonctionnelle, le trunk based development, Mob et Pair programming.  
+      <br>
+      J'ai également maintenu et fait évoluer l'application web mobile. En particulier la gestion des taxes, des reçus et des comptes clients
+      
     url: 'https://sundayapp.com/'
     location: 'Nantes, Pays de la Loire, France'
   - name: La Combe du Lion Vert

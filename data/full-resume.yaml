@@ -1,0 +1,406 @@
+---
+"$schema": https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json
+basics:
+  name: Hadrien Mens-Pellen
+  label: Fullstack Software Crafter
+  image: ''
+  email: pro@hadrienmp.fr
+  phone: ''
+  url: 'hadrienmp.fr'
+  summary: Développeur passionné, expérimenté en Java, Elm et Typescript. Spécialiste des pratiques Software Craft qui permettent de garantir l'agilité technique des logigiels.
+  location:
+    countryCode: FR
+    address: France
+  profiles:
+  - network: LinkedIn
+    username: hadrien-mens-pellen-39071231
+    url: https://www.linkedin.com/in/hadrien-mens-pellen-39071231/
+work:
+- name: XCG Consulting
+  position: Développeur Elm
+  startDate: '2022-11-01'
+  endDate: '2022-12-01'
+  highlights: 
+  - Elm
+  - Elm-ui
+  - Elm-spa
+  - Elm-forms
+  - Elm-test
+  - Material Design
+  - Mercurial
+  - Cypress
+  - Nix
+  summary: |-
+    XCG édite un logiciel de conversion de documents pour les développeurs: Redner. Il prends en entrée des templates au format standard et une source de donnée puis produit des emails bien formés, des pdf etc.
+
+    J'ai développé le frontend qui leur a permis de présenter la solution en conférence.
+  url: https://www.linkedin.com/company/sundaytech/
+  location: Nantes, Pays de la Loire, France
+- name: Sunday
+  position: Développeur Java / React Senior
+  startDate: '2021-04-30'
+  endDate: '2022-09-30'
+  highlights: 
+  - React
+  - Typescript
+  - Java
+  - Spring Boot
+  - Kafka
+  - Google Cloud
+  - Firebase
+  - PubSub
+  - Spring Boot
+  - API REST
+  - Protobuf
+  - gRPC
+  - PostgreSQL
+  - Docker
+  - Kubernetes
+  - Event Sourcing
+  - CQRS
+  - Micro services
+  - NodeJS
+  - JOOQ
+  - Vavr
+  - Java 15
+  - Github
+  - Cypress
+  - React Testing Library
+  summary: |-
+    Développeur senior
+    - Mise en place du framework CQRS et Event Sourcing
+    - Formation au refactoring dans un contexte de programmation fonctionnelle (suite de tutoriels exemples)
+    - Développement de l'application B2C, en particulier la gestion des taxes, des reçus et des comptes clients. 
+    - Coaching Mob/Pair et pratiques de développement \"trunk based\", lean et eXtreme Programming (BDD, DDD et TDD)
+  url: https://www.linkedin.com/company/sundaytech/
+  location: Nantes, Pays de la Loire, France
+- name: La Combe du Lion Vert
+  position: Coach Craft
+  startDate: '2017-04-01'
+  endDate: '2022-04-30'
+  highlights:
+    - Test Driven Development
+    - Mob Programming
+    - Refactoring
+    - Design Objet
+    - Gestion de legacy
+    - Example Mapping
+    - Event Storming
+  summary: |
+    La combe du lion vert est une ESN parisienne spécialisée dans le Software Craft.
+    J'intervenais chez eux pour former leurs équipes sur mes sujets d'expertise
+  url: 'https://www.linkedin.com/company/arolla/'
+  location: Paris
+- name: Finance Active
+  position: Développeur Java Senior
+  startDate: '2017-11-30'
+  endDate: '2022-04-30'
+  highlights: 
+  - Kotlin
+  - Tapestry
+  - CQRS
+  - Hibernate
+  - JDBI
+  - Java 8
+  - Jenkins
+  - Sonar
+  - JUnit 5
+  - Mockito
+  - HSQL
+  - PostgreSQL
+  - API REST
+  - SCRUM / Kanban / Lean
+  - Mob Programming
+  summary: |-
+    En charge du développement et de la maintenant de la solution Fairways Garantie.
+    - 200 000 Lignes de code
+    - Mise en place de nouvelles fonctionnalités et résolution de bugs.
+    - Amélioration de la qualité de l'architecture et du code grâce : aux designs patterns classiques et à Domain Driven Design ; au renforcement des principes de l'orienté objet ; à l'introduction de pratiques de programmation fonctionnelle
+    - Amélioration des performances de l'application : introduction de caches rafraichis en asynchrone ; précalculs de modèles de lecture
+  url: https://www.linkedin.com/company/arolla/
+  location: Paris
+- name: Darty
+  position: Développeur Java
+  startDate: '2016-02-28'
+  endDate: '2017-11-30'
+  highlights:
+  - DropWizard
+  - Micro services
+  - Java 8
+  - Hibernate
+  - Java 4
+  - Guice
+  - API REST
+  - Velocity
+  - SCRUM
+  summary: |-
+    Développeur sur Darty.com. Je prends en charge la maintenance et l'évolution majoritairement sur les web services.
+
+    Statistiques :
+    - 1 000 000 de lignes de code
+    - Plusieurs millions de chiffre d'affaire / jour
+
+    Réalisations :
+    - Lead developer de la refonte de l'espace client
+    - Projet exemple, java 8, TDD, Agile et déploiement continu
+    - Mise en place de tactiques de réduction de la dette technique
+    - Politique de tests automatisés et formation des développeurs
+    - Mise en place d'évenements de craft (dojos, conférences, mini projets)
+    - Pratiques Agiles
+  url: https://www.linkedin.com/company/arolla/
+  location: Bagnolet
+- name: France AgriMer
+  position: Lead Developer java
+  startDate: '2014-06-30'
+  endDate: '2015-08-31'
+  highlights: 
+  - JSF
+  - CXF
+  - Spring
+  - JPA
+  - Jenkins
+  - Sonar
+  - Junit
+  summary: |-
+    Lead Developer, j'encadre une équipe de 5 personnes pour la création d'une téléprocédure (soumission, validation de 
+    dossiers, paiements...).
+
+    Gestion d'une architecture technique complexe avec de nombreuses couches séparées par des webservices et
+    en intégration avec un SI aux technologies variées. De nombreuses règles de gestion et cas particuliers sont présents. 
+    Etant la complexité de l'architecture et du métier, le challenge était de maximiser la maintenabilité du code. 
+    Pour cela j'ai mis en place des standards de qualité de code élevés. Ces standards étaient vérifiés automatiquement par Sonar.
+  url: https://www.linkedin.com/company/soprasteria/
+- name: Ministère de l'Intérieur
+  position: Développeur java
+  startDate: '2013-04-30'
+  endDate: '2014-06-30'
+  highlights:
+  - Apache CAMEL
+  - Talend
+  - Java
+  - Tapestry
+  - Oracle
+  - JMS
+  - Hibernate
+  - JUnit
+  - Shell
+  summary: |-
+    Développeur en charge de la maintenance corrective et évolutive d'un logiciel critique en connexion avec les pays de l'espace Schengen.
+
+    Projet technologiquement poussé avec des nombreuses règles de gestion et de nombreuses lignes de codes (centaines de milliers). Les performances de l'application étaient un enjeu important car l'application devait supporter plusieurs centaines de transactions par minutes 7 jours sur 7, 24h sur 24.
+
+    J'assumais la responsabilité du contact technique pour le client en centre de service comme en réunion au ministère.
+  url: https://www.linkedin.com/company/soprasteria/
+- name: DGFIP
+  position: Lead Développeur Java
+  startDate: '2012-08-31'
+  endDate: '2013-04-30'
+  highlights:
+  - JQuery (Core, UI et de nombreux plugins)
+  - Nagios
+  - Perl
+  - PHP 5.2
+  - MySQL
+  - SHELL
+  summary: |-
+    Lead developer de l'application de supervision de la DGFiP.
+
+    Prise de connaissance, formation de développeurs juniors, et maintenance de l'application de supervision de la DGFIP (Direction Générale des Finances Publiques).
+
+    Développée en PHP, sans framework, l'application à interface riche récupérait des métriques sur les serveurs JBoss, le réseau, l'interface web etc.
+
+    Mon rôle était d'aider à la correction des bugs tout en formant l'équipe de 6 développeurs (novices) de la DGFIP à apprendre le fonctionnement de l'application et de ses technologies.
+  url: https://www.linkedin.com/company/soprasteria/
+- name: CG des Hauts de Seine
+  position: Lead Développeur
+  startDate: '2010-08-31'
+  endDate: '2012-08-31'
+  highlights: 
+  - Liferay
+  - Java
+  - Struts
+  - Hibernate
+  - Spring
+  - MySQL
+  summary: |-
+    Lead developper, j'étais en charge de l'équipe de 4 personnes qui a développé
+    le nouvel Intranet du conseil général des Hauts de Seine en Liferay (Portail J2EE).
+    Mon rôle était d'assurer la qualité du code, le respect des bonnes pratiques et
+    de développer les points les plus difficiles techniquement de l'Intranet. J'ai
+    également eu l'opportunité de former et de guider les développeurs moins expérimentés
+    et les stagiaires.
+    
+    J'ai conçu les plans de test de performances et mené les
+    tests usine de l'intranet sur JMeter.
+    
+    En tant qu'expert Liferay j'étais en
+    charge de la maintenance de 6 sites Liferay. Ces sites, vitrines d'activités du
+    conseil général subissaient de régulières refontes et pour certains des lots d'évolutions
+    chaque mois.
+  url: https://www.linkedin.com/company/soprasteria/
+- name: Sopra Group
+  position: Stagiaire iPhone
+  startDate: '2010-02-28'
+  endDate: '2010-08-31'
+  highlights: 
+  - Objective C
+  - XCode
+  - Cocoa
+  summary: |-
+    Création du pôle iPhone chez Sopra, division Secteur Public. Réalisation de documentation pour la formation, rédaction des bonnes pratiques de développement.
+
+    Formation des stagiaires arrivant au langage de programmation iPhone ainsi qu'au Framework natif iPhone (Cocoa Touch)
+
+    Conception de maquettes et de story-boards pour les avant ventes Sopra Group.
+
+    Développement d'une application mobile pour le conseil général des Hauts de Seine affichant les parcs, jardins et arbres remarquables de ce département en optimisant les vitesses de navigation sur la carte.
+
+    Recherche et développement sur le thème de la cartographie (développement d'un composant utilisant les cartes de l'IGN à la place de Google Maps).
+  url: https://www.linkedin.com/company/soprasteria/
+- name: Solanciel
+  position: Stagiaire iPhone
+  startDate: '2009-05-31'
+  endDate: '2009-08-31'
+  highlights: 
+  - Objective C
+  - XCode
+  - Cocoa
+  summary: |-
+    Developper iPhone, je suis monté en compétences sur les technologies iPhone afin de développer une application mobile pour le site TurfMethode.
+
+    L'application réalisée récupère via des webservices en PHP/XML les informations du site pour les afficher en temps réel sur les iPhones des abonnés.
+  url: ''
+  location: Région de Albi , France
+volunteer: []
+education:
+- institution: IMT Mines Albi
+  area: Génie des Systèmes d'Information
+  studyType: Ingénieur procédés
+  startDate: '2006-12-31'
+  endDate: '2010-12-31'
+  score: ''
+  courses: []
+- institution: Kérichen
+  area: Physique-Chimie
+  studyType: Bac
+  startDate: '2002-12-31'
+  endDate: '2006-12-31'
+  score: ''
+  courses: []
+awards: []
+certificates: []
+publications: []
+skills:
+- name : Java
+  level: 'expert'
+  keywords:
+  - Spring
+  - Spring Boot
+  - Spring MVC
+  - Spring Data
+  - Spring Batch
+  - Hibernate
+  - JOOQ
+  - JDBI
+  - JEE
+  - JSF
+  - Tapestry
+  - Thymeleaf
+  - Oracle
+  - MySQL
+  - PostgreSQL
+  - Kafka
+  - Gatling
+  - Jmeter
+  - Scala
+  - Kotlin
+- name: Architecture
+  level: ''
+  keywords:
+  - REST
+  - CQRS
+  - Event Sourcing
+  - Hexagonale
+  - Domain Driven Design
+- name: JavaScript
+  level: ''
+  keywords:
+  - Typescript
+  - io-ts
+  - fp-ts
+  - React
+  - NodeJS
+  - Express
+  - Socket-io
+  - gundb
+  - ReScript
+  - Redis
+  - Html
+  - Css
+  - Cypress
+  - Testing Library
+  - Jest
+- name: Cloud
+  level: ''
+  keywords:
+  - Docker
+  - Heroku
+  - Render
+  - GCP
+  - Firebase
+  - PubSub
+- name: CI/CD
+  level: ''
+  keywords:
+  - Jenkins
+  - Sonar
+  - Github Actions
+  - Gitlab CI/CD
+- name: Elm
+  level: ''
+  keywords:
+  - elm-ui
+  - elm-spa
+  - elm-pages
+  - elm-css
+- name: Craft
+  level: ''
+  keywords: 
+  - Test Driven Development
+  - Behaviour Driven Design
+  - Event storming
+  - Example mapping
+  - Scrum
+  - Kanban
+  - Lean
+  - Mob Programming (alias Ensemble Programming)
+  - Pair Programming (alias binômage)
+  - Object Calisthenics
+  - SOLID / CUPID
+  - Programmation fonctionnelle
+languages:
+- language: Français
+  fluency: maternelle
+- fluency: professionnel
+  language: Anglais
+- fluency: notions
+  language: Allemand
+interests: 
+  - name: Meetups
+    keywords: 
+      - Animation du meetup de Mob Français
+      - Software Crafters Nantes et Rennes
+      - Human Talks
+      - Elm Online
+  - name: Autre
+    keywords:
+      - Musique (Écouter et créer)
+      - Sports de glisse
+      - Toki Pona
+      - Crochet
+      - Séries
+references: []
+projects: []
+meta:
+  version: v1.0.0
+  canonical: https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json

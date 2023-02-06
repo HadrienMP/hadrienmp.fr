@@ -10,18 +10,9 @@
     {{ with (index .Site.Data "resume") }}
     <aside>
         <header>
-            <h1>{{ .basics.name | markdownify }}</h1>
-            <h2>{{ .basics.label }}</h2>
+            <h1>{{ .basics.label }}</h1>
         </header>
-
-        <section id="contact">
-            <div class="title">Contact</div>
-            <div class="content">
-                <p><a href="mailto:{{ .basics.email }}" target="_blank">{{ .basics.email }}</a></p>
-                <p><a href="{{ .basics.url }}" target="_blank">{{ .basics.url }}</a></p>
-                <p>{{ .basics.location.address }}, {{ .basics.location.countryCode }}</p>
-            </div>
-        </section>
+       
         <section id="skills">
             <div class="title">Compétences</div>
             <div class="content">
@@ -40,6 +31,7 @@
                 {{ end }}
             </div>
         </section>
+
         <section id="education">
             <div class="title">Formation</div>
             <div class="content">
@@ -64,6 +56,7 @@
                 {{ end }}
             </div>
         </section>
+
         <section id="languages">
             <div class="title">Langues</div>
             <div class="content">
@@ -75,6 +68,7 @@
                 {{ end }}
             </div>
         </section>
+
         <section id="interests">
             <div class="title">Intérêts</div>
             <div class="content">
@@ -92,6 +86,7 @@
         </section>
 
     </aside>
+
 
     <main>
         <section id="experiences">
