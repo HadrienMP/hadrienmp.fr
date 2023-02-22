@@ -15,6 +15,7 @@
           packages = with pkgs; [
             hugo
             imageworsener
+            nodePackages.gitmoji-cli
           ];
         };
       });
