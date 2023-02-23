@@ -7,6 +7,12 @@ preview:
   url: preview.png
   description: Gherkin vs. Approvals écris dans un style de combat de super héros
 slug: gherkin-vs-approvals
+category: test
+tags:
+- test
+- gherkin
+- approvals
+- behaviour driven development
 ---
 
 __TLDR :__
