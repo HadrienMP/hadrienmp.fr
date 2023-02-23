@@ -1,2 +1,2 @@
 start:
-	hugo server
+	hugo server -D

@@ -11,3 +11,10 @@
 </div>
 {{.Content}}
 {{ end }}
+
+{{ define "extraHead" }}
+{{ with $sass := resources.GetMatch "sass/article.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ end }}
+{{ end }}

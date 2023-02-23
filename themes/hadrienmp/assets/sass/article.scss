@@ -1,0 +1,10 @@
+@import "common";
+
+svg {
+  width: 100%;
+  height: fit-content;
+}
+
+main > img {
+  border: 1px solid var(--color-link);
+}

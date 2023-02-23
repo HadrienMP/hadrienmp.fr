@@ -6,6 +6,7 @@ draft: false
 preview:
   url: preview.png
   description: Gherkin vs. Approvals écris dans un style de combat de super héros
+slug: gherkin-vs-approvals
 ---
 
 __TLDR :__
@@ -13,8 +14,8 @@ L'approche Gherkin (écrire des tests en langage naturel) implique soit beaucoup
 
 Gherkin
 =======
-Qu'est-ce que Gherkin ?
------------------------
+C'est quoi ?
+------------
 C'est une notation qui encadre l'écriture de tests en langage naturel. Si vous ne connaissez pas son petit nom, elle est reconnaissable par les mots clés "Given, When, Then". C'est la notation d'outils comme cucumber ou specflow. 
 
 En pratique ça pourrait ressembler à ça :
@@ -26,9 +27,7 @@ Then I can delete a comment
 
 Pourquoi faire ?
 ----------------
-L'idée c'est que nos scénarios de tests soient écris en langage naturel. 
-
-Ainsi ils pourraient être écris par les expert.e.s métier, même si en pratique c'est rare. 
+Faire écrire nos tests par les expert.e.s métier. C'est du langage naturel donc pas de soucis. En pratique ça arrive très rarement. 
 
 Mais même s'ils sont rédigés par les devs, la modélisation en code atteint vite ses limites. C'est pourquoi j'aime beaucoup utiliser le tableau blanc pour expliquer des concepts, des fonctionnalités, des architectures. Un test en Gherkin bien écrit peut être bien plus lisible que du code.
 
