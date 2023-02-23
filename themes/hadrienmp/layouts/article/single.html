@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ with .Resources.GetMatch .Params.Preview.Url }}
 {{ with .Resize "1000x webp" }}
+<article>
 <img class="top-cover" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
     alt="{{ .Params.Preview.Description }}">
 {{ end }}
@@ -10,6 +11,7 @@
     <p>{{ .Date | time.Format "02/01/2006" }}</p>
 </div>
 {{.Content}}
+</article>
 {{ end }}
 
 {{ define "extraHead" }}
