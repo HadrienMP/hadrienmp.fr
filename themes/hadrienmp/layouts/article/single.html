@@ -1,16 +1,16 @@
 {{ define "main" }}
-{{ with .Resources.GetMatch .Params.Preview.Url }}
-{{ with .Resize "1000x webp" }}
 <article>
-<img class="top-cover" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
+  {{ with .Resources.GetMatch .Params.Preview.Url }}
+  {{ with .Resize "1000x webp" }}
+  <img class="top-cover" src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}"
     alt="{{ .Params.Preview.Description }}">
-{{ end }}
-{{ end }}
-<div id="blog-title">
+  {{ end }}
+  {{ end }}
+  <div id="blog-title">
     <h1>{{.Title}}</h1>
     <p>{{ .Date | time.Format "02/01/2006" }}</p>
-</div>
-{{.Content}}
+  </div>
+  {{.Content}}
 </article>
 {{ end }}
 
@@ -19,4 +19,13 @@
 {{ $style := $sass | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 {{ end }}
+<meta property="og:title" content="{{.Title}}">
+<meta property="og:type" content="article">
+{{ with .Resources.GetMatch .Params.Preview.Url }}
+{{ with .Resize "1000x webp" }}
+<meta property="og:image" content="{{ .Permalink }}">
+{{ end }}
+{{ end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image:alt" content="{{ .Params.Preview.Description }}">
 {{ end }}
