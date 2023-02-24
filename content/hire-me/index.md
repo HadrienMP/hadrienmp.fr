@@ -12,6 +12,7 @@ menu:
         weight: 6
 cta: true
 ---
+## En mission
 Vous avez besoin d'aide pour créér ou maintenir votre produit ? J'apporte mon expertise technique et technologie pour vous permettre __faire durer votre produit et votre équipe dans le temps__.
 
 - <a href="/cv" target="_blank"><i class="las la-file medium-icon"></i> Voir mon CV</a>
