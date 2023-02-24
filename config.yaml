@@ -43,3 +43,6 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+
+  highlight:
+    style: base16-snazzy
