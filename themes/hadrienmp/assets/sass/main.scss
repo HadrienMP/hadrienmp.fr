@@ -177,6 +177,7 @@ img {
 hr {
     width: 100%;
     border-color: var(--color-shadow);
+    margin: 1.8rem 0;
 }
 
 #blog-title {
@@ -195,6 +196,15 @@ hr {
 .medium-icon {
     font-size: 1.4em;
     vertical-align: text-bottom;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+iframe {
+  width: 100%;
 }
 
 @import "header";

@@ -46,7 +46,7 @@ Faire écrire nos tests par les expert.e.s métier par exemple. C'est du langage
 
 Mais même s'ils sont rédigés par les devs, la modélisation en code atteint vite ses limites. C'est pourquoi j'aime beaucoup utiliser le tableau blanc pour expliquer des concepts, des fonctionnalités, des architectures. Un test en Gherkin bien écrit peut être bien plus lisible que du code.
 
-Si on prends l'exemple du [jeu du morpion qu'on a développé avec Thomas Carpaye](todo), nos tests ressemblent à ça
+Si on prends l'exemple du [jeu du morpion qu'on a développé avec Thomas Carpaye](/talk/demo-tdd-en-elm/), nos tests ressemblent à ça
 ```elm
 emptyGrid
   |> play X (0,0)
