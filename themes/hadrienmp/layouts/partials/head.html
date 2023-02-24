@@ -1,33 +1,50 @@
 <head>
-    {{ $sass := resources.Get "sass/main.scss" }}
-    {{ $style := $sass | resources.ToCSS }}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+  {{ $sass := resources.Get "sass/main.scss" }}
+  {{ $style := $sass | resources.ToCSS }}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet" media="none" onload="if(media!='all')media='all'">
 
-    <noscript>
-/736x/14/35/8f/14358f44099aa4d82ffb1330daad098a--youtube-search.jpg        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-            rel="stylesheet">
-    </noscript>
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-    <link rel="stylesheet" href="/css/line-awesome.min.css" media="none" onload="if(media!='all')media='all'">
-    <noscript>
-        <link rel="stylesheet" href="/css/line-awesome.min.css">
-    </noscript>
-    <meta charset="utf-8">
-    <meta name="author" content="Hadrien MENS-PELLEN">
-    <meta name="description" content="{{ .Params.description }}">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta lang="fr">
-    <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
-    <meta name="description"
-        content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+  <noscript>
+    /736x/14/35/8f/14358f44099aa4d82ffb1330daad098a--youtube-search.jpg
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet">
+  </noscript>
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+  <link rel="stylesheet" href="/css/line-awesome.min.css" media="none" onload="if(media!='all')media='all'">
+  <noscript>
+    <link rel="stylesheet" href="/css/line-awesome.min.css">
+  </noscript>
+  <meta charset="utf-8">
+  <meta name="author" content="Hadrien MENS-PELLEN">
+  <meta name="description" content="{{ .Params.description }}">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta lang="fr">
+  <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+  <meta name="description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <!-- Matomo -->
+  <script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function () {
+      var u = "https://hadrienmp.matomo.cloud/";
+      _paq.push(['setTrackerUrl', u + 'matomo.php']);
+      _paq.push(['setSiteId', '1']);
+      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+      g.async = true; g.src = '//cdn.matomo.cloud/hadrienmp.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g, s);
+    })();
+  </script>
+  <!-- End Matomo Code -->
+
 </head>
