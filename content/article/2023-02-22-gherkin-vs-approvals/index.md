@@ -15,7 +15,7 @@ tags:
 - behaviour driven development
 ---
 
-__TLDR :__
+__TL;DR :__
 Traduire le langage naturel de vos expert.e.s métier en code, c'est très compliqué. Il y a mille manières de dire la même chose en langage naturel. Une seule dans votre code.
 
 Pourtant de la documentation lisible et toujours à jour, ça a beaucoup de valeur.
@@ -24,11 +24,15 @@ Alors prenons le problème à l'envers, générons notre documentation dans les 
 
 C'est beaucoup plus simple car on peut représenter d'une seule manière états et transitions.
 
+----------------------------------------
+
+Pour simplifier la suite, je m'attaque à la pratique d'écrire ses tests en Gherkin, pas à la notation Gherkin qui est très bien.
+
 Gherkin
 =======
 C'est quoi ?
 ------------
-C'est une __notation__ qui encadre l'écriture de __tests en langage naturel__. Si vous ne connaissez pas son petit nom, elle est reconnaissable par les mots clés "Given, When, Then". C'est la notation d'outils comme cucumber ou specflow. Ça peut ressembler à ça :
+C'est une __notation__ qui encadre l'écriture de __tests en langage naturel__. Si vous ne connaissez pas son petit nom, elle est reconnaissable par les mots clés "Given, When, Then". C'est la notation d'outils comme cucumber, specflow, fitnesse etc. Ça peut ressembler à ça :
 ```Gherkin
 Given I am logged in as an admin
 When I go to a blog post
@@ -37,6 +41,7 @@ Then I can delete a comment
 
 Pourquoi faire ?
 ----------------
+
 Faire écrire nos tests par les expert.e.s métier par exemple. C'est du langage naturel donc pas de soucis. En vrai, on voit rarement des équipes où ça arrive. 
 
 Mais même s'ils sont rédigés par les devs, la modélisation en code atteint vite ses limites. C'est pourquoi j'aime beaucoup utiliser le tableau blanc pour expliquer des concepts, des fonctionnalités, des architectures. Un test en Gherkin bien écrit peut être bien plus lisible que du code.
@@ -68,22 +73,64 @@ C'est plus lisible. Même si on aurait pu faire mieux en lisibilité pour le cod
 
 De la colle et des menteurs
 ---------------------------
+Il faut maintenant pouvoir produire un test depuis la notation Gherkin. 
+
 Pour chaque fragment de gherkin il va vous falloir définir un parseur pour en extraire les valeurs intéressantes. Une fois que vous avez vos valeurs, vous écrivez votre scénario de test comme d'habitude dans votre langage de programmation. En gros il vous faut tout une __couche de glue__ entre le domaine du langage naturel et le domaine du code.
- 
+
 En tant que devs on a l'habitude des couches de glue. C'est pas grave, tant qu'elles ne sont pas trop grosses.
 
-Moment useless fact, une des techniques de police pour reconnaitre un menteur c'est de poser la même question plusieurs fois. La personne qui ment récitera son mensonge. Elle utilise les mêmes mots, les mêmes expressions etc. À l'inverse, la personne sincère modifie naturellement son discours à chaque fois. Elle traduit en fait à la volée un modèle mental, des souvenirs.
+### Collons un coupon de réduction avec cucumber.js
 
-Donc, si vous questionnez votre expert.e métier, vous aurez des règles exprimées différemment à chaque fois. Si vous avez plusieurs expert.e.s, c'est encore mieux ! Chacune aura sa manière de s'exprimer !
+Le scénario (qui sera sauvé dans un fichier séparé) 
 
-### Un exemple
-On pourrait écrire un scénario qui décrit un coupon de réduction comme ça :
 ```gherkin
 Given a coupon of 10$ with a minimum of 50$ of purchase
 When the shopping cart is of 50$
 Then the amount billed is 40$
 ```
-Mais aussi comme ça :
+
+Le fichier "steps" de cucumber.js
+
+```js
+const defineSupportCode = require('cucumber').defineSupportCode;
+
+defineSupportCode(({ Given, Then, When }) => {
+  let coupon = null;
+  let actualBilledAmount = null;
+  
+  // C'est ce que j'appelle un parseur
+  Given('a coupon of {amount}$ with a minimum of {minimumPurchase}$ of purchase', 
+        (amount, minimumPurchase) => {
+          coupon = {amount, minimumPurchase};
+        });
+  When('the shopping cart is of {amount}$', 
+      (amount) => { 
+        actualBilledAmount = applyCoupon({coupon, cartTotal: amount});
+      });
+  Then('the amount billed is {amount}$',
+      (amount) => { 
+        expect(actualBilledAmount).toEqual(amount);
+      });
+})
+
+```
+
+Avec de la magie, cucumber va répertorier tous vos parseurs et vos fichier de scénario. Il va trouver le parseur qui correspond à votre scénario et vous sortir un rapport de tests.
+
+### Instant police
+
+Moment useless fact. Une des __techniques de police pour reconnaitre un menteur__ c'est de poser la même question plusieurs fois. La personne qui ment récitera son mensonge. Elle utilise les mêmes mots, les mêmes expressions etc. À l'inverse, la personne sincère modifie naturellement son discours à chaque fois. Elle traduit en fait à la volée un modèle mental, des souvenirs.
+
+Donc, __si vous questionnez votre expert.e métier, vous aurez des règles exprimées différemment à chaque fois__. Si vous avez plusieurs expert.e.s, c'est encore mieux ! Chacune aura sa manière de s'exprimer !
+
+### 50 nuances de coupons de réduction
+Dans l'exemple précédent, on avait un exemple de scénario de coupon de réduction :
+```gherkin
+Given a coupon of 10$ with a minimum of 50$ of purchase
+When the shopping cart is of 50$
+Then the amount billed is 40$
+```
+On pourrait aussi l'écrire comme ça
 ```gherkin
 Given a shopping cart of 50$
 And a coupon for 10$ off after a 50$ purchase or more
@@ -98,15 +145,14 @@ When I present my coupon for 10$ off for a 50$ purchase or more
 Then I will pay 40$
 ```
 
-Et on pourrait trouver encore de nombreuses autres manières d'exprimer cette règle de gestion.
+Et je ne m'arrête que par soucis de longueur de cet article 😇.
 
-Aie
+Aïe !
 ---
-Ça commence à sentir mauvais non ? Si notre ensemble d'entrée en Gherkin est gigantesque, notre ensemble de sortie en code est petit. On va avoir __beaucoup de glue__.
+Ça commence à sentir mauvais non ? Si notre ensemble d'entrée en Gherkin est gigantesque, notre ensemble de sortie en code est petit. On va avoir __beaucoup de glue__. Le fichier de parseur d'une fonctionnalité va grossir pas mal. Et quand vous ajoutez à ça la nécessité de réutiliser les steps entre des fonctionnalités différentes, ça devient un sacré fouilli.
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 641 416.484375" width="641" height="416.484375" style="max-width: 600px">
   <!-- svg-source:excalidraw -->
-  
   <defs>
     <style class="style-fonts">
       @font-face {
@@ -124,11 +170,9 @@ Aie
 Mais alors, que faire ?
 
 ## Réduire l'ensemble d'entrée ?
-Il y a trop de manières de dire la même chose en anglais. Si on ne veut pas se noyer dans la glue, il faut mettre des limites. 
-
 Une des manières de le faire est de __n'autoriser qu'une seule formulation "naturelle" par fragment de code__.
 
-En faisant ça, __on vient juste de créer un nouveau langage de programmation__ pour notre domaine. On appelle souvent ça un "Domain Specific Language". Pas de problème avec les DSL en soit, c'est même plutôt cool. Mais, de facto, __les personnes qui l'écrivent sont des devs__, même si leur rôle est PO.
+En gros, on crée un set de vocabulaire restreint qu'on va parser pour le transformer en un test exécutable. Tient c'est marrant, ça ressemble beaucoup à la définition d'un langage de programmation ! Oui. __On vient juste de créer un nouveau langage de programmation__ pour notre domaine. On appelle souvent ça un "Domain Specific Language". Pas de problème avec les DSL en soit, c'est même plutôt cool. Mais, de facto, __les personnes qui l'écrivent sont des devs__, même si leur rôle est Product Owner.
 
 Même avec cette solution il va vous falloir un certain outillage pour que ça fonctionne :
 - De l'analyse statique pour s'assurer que la règle "1 formulation / 1 fragment de code" soit respectée
@@ -140,23 +184,48 @@ Même avec cette solution il va vous falloir un certain outillage pour que ça f
 
 Approvals
 =========
-Comme je l'ai dit auparavant, on ne fait pas de documentation pour rien. C'est plus compréhensible que du code quand elle est bien faite. 
-
-Ce que j'appelle approvals par abus de langage est une technique qui règle le problème de complexité de Gherkin en atteignant une meilleure lisibilité.
-
 ## C'est quoi ?
+
 Écrivez vos cas de tests comme d'habitude, mais __plutôt que de construire une assertion, construisez une documentation__ lisible de ce cas. Documentez le setup, l'action et la sortie. Vous pouvez l'écrire dans un fichier Markdown, __AsciiDoc__, Graph même Gherkin si vous voulez ! 
 
 Une fois la documentation générée on la vérifie à la main et on l'approuve (en renommant le fichier en .approved par exemple). Chaque fois qu'on relancera les tests, ils __compareront la documentation générée avec celle approuvée__. Chaque différence est une régression.
 
 La librairie [approvals](https://approvaltests.com/) pourra vous aider à gérer simplement vos fichiers, assertions et approbations.
 
-## Pourquoi c'est mieux que Gherkin ?
+Reprenons l'exemple du coupon de réduction !
+```js
+describe('Minimum purchase coupon', () => {
+  it('is substracted from the cart amount', () => {
+    // Given
+    const coupon = { minimumPurchase: 50, amount: 10 };
+    const cartTotal = 50;
+
+    // When
+    const billedAmount = applyCoupon({ coupon, cartTotal });
+
+    // Then
+		// verify produit une assertion, donc vous lancez ce test avec votre test runner habituel.
+    approvals.verify(`
+    Given a coupon of ${coupon.amount}$ with a minimum of ${coupon.minimumPurchase}$ of purchase
+    When the shopping cart is of ${cartTotal}$
+    Then the amount billed is ${billedAmount}$ 
+    `);
+    // Ici je produit de la notation gherkin, on commence à bien la connaitre, autant l'exploiter !
+  });
+});
+
+// approvals va créer un fichier dans le même dossier que le test
+// minimum_purchase_coupon.is_substracted_from_the_cart_amount.approved.txt
+// et sa version .received.txt
+```
+
+## Pourquoi c'est mieux ?
+
 __La complexité est bien moindre__ car l'ensemble d'entrée est réduit. Vos états et transitions sont exprimées d'une seule manière dans le code. Ils peuvent potentiellement être représentés d'une seule manière dans la documentation.
 
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 393 147" width="393" height="147" style="max-width: 400px">
   <!-- svg-source:excalidraw -->
-  
+
   <defs>
     <style class="style-fonts">
       @font-face {
@@ -173,13 +242,22 @@ __La complexité est bien moindre__ car l'ensemble d'entrée est réduit. Vos é
 
 De plus, comme on s'affranchi de la contrainte du parsing, on peut être __plus créatifs sur la forme de cette documentation__. On peut construire des graphs, des SVGs animés etc.
 
-Et on peut toujours prendre notre expert.e métier et écrire les tests à plusieurs. Grâce au support de la documentation, tout le monde pourra comprendre.
+On pourrait imaginer de l'ascii art pour notre exemple de coupon !
+
+```markdown
++----------------------+       o--\           |                 
+|       10$ off        |           \    50$   |     =>  40$ to pay
+| for a minimum of 50$ |            \_________|  
++----------------------+             O       O   
+```
+
+Et on peut toujours __prendre notre expert.e métier et écrire les tests à plusieurs__. Grâce au support de la documentation, tout le monde pourra comprendre.
 
 ### Anecdote
 
 Avec [Thomas CARPAYE](https://twitter.com/Tarcaye) (oui encore), on utilisé cette technique pour refactorer du code legacy. 
 
-On avait trouvé un fragment de code à refactor qui était incompréhensible. On a trouvé les entrées à faire varier puis on a fait une combinatoire des valeurs intéressantes en entrée et sorti un gros fichier markdown. À chaque opération de refactor, on relancait notre test et on voyait si on avait cassé quelque chose ou non. 
+On avait trouvé un fragment de code à refactor qui était incompréhensible. On a trouvé les entrées à faire varier. On a fait une combinatoire des valeurs intéressantes pour nous servir d'entrée de tests et sorti un gros fichier markdown avec le setup et le résultat. À chaque opération de refactor, on relancait notre test et on voyait si on avait cassé quelque chose ou non. 
 
 Le gros avantage ? Quand on trouvait que ce qu'on avait en sortie semblait aussi, voire plus, logique qu'auparavant on amenait notre doc à notre expert métier. Il pouvait très facilement nous dire qui a raison, avant ou après. Très puissant.
 
@@ -187,9 +265,9 @@ Le gros avantage ? Quand on trouvait que ce qu'on avait en sortie semblait aussi
 Conclusion
 ==========
 
-Je n'ai jamais été trop convaincu par Gherkin et les méthodologies autour. En revanche, j'adore la documentation visuelle. Je retrouve plus de ce qui me plaisait dans le Behaviour Driven Development avec approvals qu'avec Gherkin.
+J'adore la documentation visuelle. Je retrouve plus de ce qui me plaisait dans le Behaviour Driven Development avec la génération de documentation qu'avec la génération de tests à partir de Gherkin.
 
-Comme d'habitude, je sais que mon opinion est controversée. La communauté aime beaucoup Gherkin et tant mieux si ça fonctionne dans vos équipes. Mais __que diriez-vous de tenter la doc à l'envers__ pour voir ce que ça donne ?
+Comme d'habitude, je sais que mon opinion est controversée. La communauté aime beaucoup les outils Gherkin (style cucumber) et tant mieux si ça fonctionne dans vos équipes. Mais __que diriez-vous de tenter la génération de doc__ pour voir ce que ça donne ?
 
 
 ## Pour aller plus loin
