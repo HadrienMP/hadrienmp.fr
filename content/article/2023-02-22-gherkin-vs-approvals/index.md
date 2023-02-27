@@ -5,7 +5,7 @@ date: 2023-02-22T08:36:00+01:00
 draft: false
 preview:
   url: preview.png
-  description: Gherkin vs. Approvals écris dans un style de combat de super héros
+  description: Gherkin vs. Approvals écrit dans un style de combat de super héros
 slug: gherkin-vs-approvals
 category: test
 tags:
@@ -16,7 +16,7 @@ tags:
 ---
 
 __TL;DR :__
-Traduire le langage de vos expert.e.s métier en code, c'est très compliqué. Il y a mille manières de dire la même chose en langage naturel. Une seule dans votre code.
+Traduire le langage de vos expert.e.s métier en code, c'est très compliqué. Il y a mille manières de dire une chose en langage naturel. Contre une seule dans votre code.
 
 Pourtant de la documentation lisible et toujours à jour, ça a beaucoup de valeur.
 
@@ -39,10 +39,10 @@ When I go to a blog post
 Then I can delete a comment
 ```
 
-Pourquoi faire ?
+Pour quoi faire ?
 ----------------
 
-Faire écrire nos tests par les expert.e.s métier par exemple. En vrai, on voit rarement des équipes où ça arrive. 
+Faire écrire nos tests par les expert.e.s métier par exemple. Même si, en vrai, on voit rarement des équipes où ça fonctionne. 
 
 Mais même s'ils sont rédigés par les devs, la modélisation en code atteint vite ses limites. C'est pourquoi j'aime beaucoup utiliser le tableau blanc pour expliquer des concepts, des fonctionnalités, des architectures. Un test en Gherkin bien écrit peut être bien plus lisible que du code.
 
@@ -75,7 +75,7 @@ De la colle et des menteurs
 ---------------------------
 Il faut maintenant pouvoir produire un test depuis la notation Gherkin. 
 
-Pour chaque fragment de gherkin il va vous falloir définir un parseur pour extraire les valeurs intéressantes. Une fois que vous avez vos valeurs, vous écrivez votre scénario de test comme d'habitude dans votre langage de programmation. En gros, il vous faut tout une __couche de glue__ entre le domaine du langage naturel et le domaine du code.
+Pour chaque fragment de Gherkin il va vous falloir définir un parseur pour extraire les valeurs intéressantes. Une fois que vous avez vos valeurs, vous écrivez votre scénario de test comme d'habitude dans votre langage de programmation. En gros, il vous faut tout une __couche de glue__ entre le domaine du langage naturel et le domaine du code.
 
 En tant que devs on a l'habitude des couches de glue. C'est pas grave, tant qu'elles ne sont pas trop grosses.
 
@@ -257,7 +257,7 @@ Et on peut toujours __prendre notre expert.e métier et écrire les tests à plu
 
 Avec [Thomas CARPAYE](https://twitter.com/Tarcaye) (oui encore), on utilisé cette technique pour refactorer du code legacy. 
 
-On avait trouvé un fragment de code à refactor qui était incompréhensible. On a trouvé les entrées à faire varier. On a fait une combinatoire des valeurs intéressantes pour nous servir d'entrée de tests et sorti un gros fichier markdown avec le setup et le résultat. À chaque opération de refactor, on relancait notre test et on voyait si on avait cassé quelque chose ou non. 
+On avait trouvé un fragment de code à refactor qui était incompréhensible. On a fait une combinatoire des valeurs intéressantes pour nous servir d'entrée de tests et sorti un gros fichier markdown avec le setup et le résultat pour chaque entrée. À chaque opération de refactor, on relancait notre test et on voyait si on avait cassé quelque chose ou non. 
 
 Le gros avantage ? Quand on trouvait que ce qu'on avait en sortie semblait aussi, voire plus, logique qu'auparavant on amenait notre doc à notre expert métier. Il pouvait très facilement nous dire qui a raison, avant ou après. Très puissant.
 
