@@ -16,7 +16,7 @@ tags:
 ---
 
 __TL;DR :__
-Traduire le langage naturel de vos expert.e.s métier en code, c'est très compliqué. Il y a mille manières de dire la même chose en langage naturel. Une seule dans votre code.
+Traduire le langage de vos expert.e.s métier en code, c'est très compliqué. Il y a mille manières de dire la même chose en langage naturel. Une seule dans votre code.
 
 Pourtant de la documentation lisible et toujours à jour, ça a beaucoup de valeur.
 
@@ -42,7 +42,7 @@ Then I can delete a comment
 Pourquoi faire ?
 ----------------
 
-Faire écrire nos tests par les expert.e.s métier par exemple. C'est du langage naturel donc pas de soucis. En vrai, on voit rarement des équipes où ça arrive. 
+Faire écrire nos tests par les expert.e.s métier par exemple. En vrai, on voit rarement des équipes où ça arrive. 
 
 Mais même s'ils sont rédigés par les devs, la modélisation en code atteint vite ses limites. C'est pourquoi j'aime beaucoup utiliser le tableau blanc pour expliquer des concepts, des fonctionnalités, des architectures. Un test en Gherkin bien écrit peut être bien plus lisible que du code.
 
@@ -68,14 +68,14 @@ When X plays on the bottom right
 Then X wins
 ```
 
-C'est plus lisible. Même si on aurait pu faire mieux en lisibilité pour le code en Elm.
+C'est plus lisible. Même si on aurait pu faire mieux pour le code en Elm.
 
 
 De la colle et des menteurs
 ---------------------------
 Il faut maintenant pouvoir produire un test depuis la notation Gherkin. 
 
-Pour chaque fragment de gherkin il va vous falloir définir un parseur pour en extraire les valeurs intéressantes. Une fois que vous avez vos valeurs, vous écrivez votre scénario de test comme d'habitude dans votre langage de programmation. En gros il vous faut tout une __couche de glue__ entre le domaine du langage naturel et le domaine du code.
+Pour chaque fragment de gherkin il va vous falloir définir un parseur pour extraire les valeurs intéressantes. Une fois que vous avez vos valeurs, vous écrivez votre scénario de test comme d'habitude dans votre langage de programmation. En gros, il vous faut tout une __couche de glue__ entre le domaine du langage naturel et le domaine du code.
 
 En tant que devs on a l'habitude des couches de glue. C'est pas grave, tant qu'elles ne sont pas trop grosses.
 
@@ -119,9 +119,9 @@ Avec de la magie, cucumber va répertorier tous vos parseurs et vos fichier de s
 
 ### Instant police
 
-Moment useless fact. Une des __techniques de police pour reconnaitre un menteur__ c'est de poser la même question plusieurs fois. La personne qui ment récitera son mensonge. Elle utilise les mêmes mots, les mêmes expressions etc. À l'inverse, la personne sincère modifie naturellement son discours à chaque fois. Elle traduit en fait à la volée un modèle mental, des souvenirs.
+Une des __techniques de police pour reconnaitre un menteur__ c'est de poser la même question plusieurs fois. La personne qui ment récitera son mensonge. Elle utilise les mêmes mots, les mêmes expressions etc. À l'inverse, la personne sincère modifie naturellement son discours. Elle traduit en fait à la volée un modèle mental, des souvenirs.
 
-Donc, __si vous questionnez votre expert.e métier, vous aurez des règles exprimées différemment à chaque fois__. Si vous avez plusieurs expert.e.s, c'est encore mieux ! Chacune aura sa manière de s'exprimer !
+Donc, __si vous questionnez votre expert.e métier, vous aurez des règles exprimées différemment à chaque fois__. Si vous avez plusieurs expert.e.s, c'est encore mieux ! Chacun.e aura sa manière de s'exprimer !
 
 ### 50 nuances de coupons de réduction
 Dans l'exemple précédent, on avait un exemple de scénario de coupon de réduction :
@@ -145,7 +145,7 @@ When I present my coupon for 10$ off for a 50$ purchase or more
 Then I will pay 40$
 ```
 
-Et je ne m'arrête que par soucis de longueur de cet article 😇.
+Et je ne m'arrête que par souci de longueur de cet article 😇.
 
 Aïe !
 ---
@@ -172,14 +172,14 @@ Mais alors, que faire ?
 ## Réduire l'ensemble d'entrée ?
 Une des manières de le faire est de __n'autoriser qu'une seule formulation "naturelle" par fragment de code__.
 
-En gros, on crée un set de vocabulaire restreint qu'on va parser pour le transformer en un test exécutable. Tient c'est marrant, ça ressemble beaucoup à la définition d'un langage de programmation ! Oui. __On vient juste de créer un nouveau langage de programmation__ pour notre domaine. On appelle souvent ça un "Domain Specific Language". Pas de problème avec les DSL en soit, c'est même plutôt cool. Mais, de facto, __les personnes qui l'écrivent sont des devs__, même si leur rôle est Product Owner.
+On crée un set de vocabulaire restreint qu'on va parser pour le transformer en un test exécutable. Tiens c'est marrant, ça ressemble beaucoup à la définition d'un langage de programmation ! Oui. __On vient juste de créer un nouveau langage de programmation__ pour notre domaine. On appelle ça un "Domain Specific Language". Pas de problème avec les DSL en soit, c'est même plutôt cool. Mais, de facto, __les personnes qui l'écrivent sont des devs__, même si leur rôle est Product Owner.
 
 Même avec cette solution il va vous falloir un certain outillage pour que ça fonctionne :
 - De l'analyse statique pour s'assurer que la règle "1 formulation / 1 fragment de code" soit respectée
 - De l'autocomplétion pour ne pas se tromper sur la forme
 - Un dictionnaire des formules
 
-Ça fait pas mal de boulot. Rendus là, __je préfère clairement écrire du code directement__ et faire un effort de lisibilité pour pouvoir écrire les tests en binômes avec l'expert.e métier.
+Ça fait pas mal de boulot. Rendus là, __je préfère clairement écrire du code directement__ et faire un effort de lisibilité pour pouvoir écrire les tests en binôme avec l'expert.e métier.
 
 
 Approvals
