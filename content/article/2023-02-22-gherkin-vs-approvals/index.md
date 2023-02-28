@@ -271,6 +271,6 @@ Comme d'habitude, je sais que mon opinion est controversée. La communauté aime
 
 
 ## Pour aller plus loin
-Pour aller plus loin sur le sujet, cette technique d'approvals est bien expliquée par [Stéphane FAUVEL](https://twitter.com/sebfauvel) à [bdx.io](https://www.youtube.com/watch?v=AQDILnknTJ0&themeRefresh=1). 
+Pour aller plus loin sur le sujet, cette technique d'approvals est bien expliquée par [S FAUVEL](https://twitter.com/sebfauvel) à [bdx.io](https://www.youtube.com/watch?v=AQDILnknTJ0&themeRefresh=1). 
 
 Elle est inspirée de la philosophie [living documentation](https://www.informit.com/store/living-documentation-continuous-knowledge-sharing-by-9780134689326) de [Cyrille MARTRAIRE](https://twitter.com/cyriux), n'hésitez pas à aller jeter un oeil à son livre sur le sujet. De la doc qui est toujours à jour par design, qui pourrait dire non ?
