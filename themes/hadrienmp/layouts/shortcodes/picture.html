@@ -3,11 +3,8 @@
 {{ $width := .Get "width"}}
 {{ $height := .Get "height"}}
 
-{{ $image := resources.GetMatch $src }}
-
-{{ $size := "" | append $width "x" $height}}
-
-{{ with $image }}
+{{ $size := printf "%sx%s webp" $width $height}}
+{{ with .Page.Resources.GetMatch $src }}
 {{ $resized := .Resize $size }}
 <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $alt }}">
 {{ end }}
