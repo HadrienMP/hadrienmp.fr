@@ -1,6 +1,6 @@
 ---
 title: TDD c'est pas pour toi
-description: 
+description: J'adore TDD, c'est une pratique qui a transformé ma carrière. Mais c'est pas pour tout le monde, tout le temps. 8 moments à ne pas l'utiliser !
 date: 2023-03-25T09:58:00+01:00
 draft: false
 preview:
