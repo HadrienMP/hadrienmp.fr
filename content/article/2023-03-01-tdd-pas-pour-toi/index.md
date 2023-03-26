@@ -5,7 +5,7 @@ date: 2023-03-25T09:58:00+01:00
 draft: false
 preview:
   url: preview-2.jpg
-  description: une personne jette le mot TDD dans une poubelle
+  description: un chat avec les yeux grands ouverts. le texte dit "If I just keep looking cute, they'll surely blame the dog"
 slug: tdd-c-est-pas-pour-toi
 category: catmatique
 tags:
@@ -32,7 +32,7 @@ __Quand est-ce que TDD c’est pas pour vous ?__
 
 -----
 <div class="row">
-{{< picture src="strong.jpg" alt="Un meme de chat qui tire la langue. Il est écrit en grand : Here's my opinion of your opinion" width="300">}}
+{{< picture src="strong.jpg" alt="Un chat roux allongé avec une patte sur une altère rose" width="300">}}
 <div>
 
 # 1. Vous êtes aussi bon·ne·s sans
@@ -50,7 +50,7 @@ Je ne vous conseillerais pas TDD si vous avez déjà ces bénéfices sans. Mais 
 -----
 
 <div class="row">
-{{< picture src="trash.jpg" alt="Un meme de chat qui tire la langue. Il est écrit en grand : Here's my opinion of your opinion" width="300">}}
+{{< picture src="trash.jpg" alt="Un chaton roux dans une corbeille à papier noire" width="300">}}
 <div>
 
 # 2, Vous faites du jetable
@@ -61,7 +61,7 @@ Si je mène une expérience pour prouver une faisabilité technique ou confirmer
 -----
 
 <div class="row">
-{{< picture src="tools2.jpg" alt="Un meme de chat qui tire la langue. Il est écrit en grand : Here's my opinion of your opinion" width="300">}}
+{{< picture src="tools2.jpg" alt="Un chat noir et blanc est allongé sur une mallette à outils, il est dévisagé par un autre chat marron et noir, assis à côté" width="300">}}
 <div>
 
 # 3. Vous apprenez vos outils 
@@ -78,7 +78,7 @@ Mais on pourrait éviter cet écueil ! Il m’aurait suffi d’un tutoriel Elm e
 -----
 
 <div class="row">
-{{< picture src="bored.webp" alt="Un meme de chat qui tire la langue. Il est écrit en grand : Here's my opinion of your opinion" width="300">}}
+{{< picture src="bored.webp" alt="Un chaton gris qui tends sa patte depuis le dessous d'un tissu vert. Le text dit 'Help me pwease... I am bored'" width="300">}}
 <div>
 
 # 4. Vos tests sont lents
@@ -95,7 +95,7 @@ On peut aussi agrandir la taille des steps TDD ou écrire et faire passer plusie
 -----
 
 <div class="row">
-{{< picture src="geek.jpg" alt="Un meme de chat qui tire la langue. Il est écrit en grand : Here's my opinion of your opinion" width="300">}}
+{{< picture src="geek.jpg" alt="Deux photos superposées. Celle du haut est un chat tigré avec les yeux fermés et des grosses lunettes style rayban. La deuxième est un chaton roux tigré avec un bonnet vert et des grosses lunettes." width="300">}}
 <div>
 
 # 5. Votre système de type suffit
@@ -113,7 +113,7 @@ Je ne l’ai pas encore essayé, mais apparemment, un lange comme Idriss pourrai
 -----
 
 <div class="row">
-{{< picture src="book.jpg" alt="Un meme de chat qui tire la langue. Il est écrit en grand : Here's my opinion of your opinion" width="300">}}
+{{< picture src="book.jpg" alt="Photographie d'un chat qui semble un livre, allongé dessus" width="300">}}
 <div>
 
 # 6. Vous codez un problème connu
@@ -128,7 +128,7 @@ Souvent, inclure une librairie est plus simple. Mais pour certains projets où l
 -----
 
 <div class="row">
-{{< picture src="pipes.jpg" alt="Un meme de chat qui tire la langue. Il est écrit en grand : Here's my opinion of your opinion" width="300">}}
+{{< picture src="pipes.jpg" alt="Un meme avec un circuit de plomberie complexe. Le text dit 'Seems straight forward, what could possibly go wrong ?'" width="300">}}
 <div>
 
 # 7. Vous n’avez pas de code métier
@@ -141,7 +141,7 @@ Mais méfiez-vous, au début de ma carrière, je n'aurais pas été capable de d
 -----
 
 <div class="row">
-{{< picture src="ocicat.jpg" alt="Un meme de chat qui tire la langue. Il est écrit en grand : Here's my opinion of your opinion" width="300">}}
+{{< picture src="ocicat.jpg" alt="Une photographie d'un ocicat à côté d'une feuille morte. Ce félin fait la même taille que la feuille" width="300">}}
 <div>
 
 # 8. Vous allez produire un volume minimal de code
