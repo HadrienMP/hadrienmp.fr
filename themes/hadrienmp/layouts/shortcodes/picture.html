@@ -1,10 +1,11 @@
 {{ $src := .Get "src"}}
 {{ $alt := .Get "alt"}}
+{{ $class := .Get "class"}}
 {{ $width := .Get "width"}}
 {{ $height := .Get "height"}}
 
 {{ $size := printf "%sx%s webp" $width $height}}
 {{ with .Page.Resources.GetMatch $src }}
 {{ $resized := .Resize $size }}
-<img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $alt }}">
+<img src="{{ $resized.RelPermalink }}" class="{{ $class }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}" alt="{{ $alt }}">
 {{ end }}
