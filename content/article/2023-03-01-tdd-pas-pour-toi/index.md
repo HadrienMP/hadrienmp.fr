@@ -105,7 +105,7 @@ Si je pouvais passer toute la connaissance portée par mes tests automatiques da
 
 J’ai tenté ce qu’on appelle le __Type__ Driven Development. Et j’ai vu que nos systèmes de types ne permettent pas d'assurer toutes les règles métiers que je vérifie dans les tests. La compilation seule ne permet pas de valider que votre système se comporte correctement. 
 
-Je ne l’ai pas encore essayé, mais apparemment, un lange comme Idriss pourrait le faire. Mais est-ce que ça sera plus intéressant que les tests ? Je vous dirais quand je le saurai 🤣.
+Je ne l’ai pas encore essayé, mais apparemment, un langage comme Idriss pourrait le faire. Mais est-ce que ça sera plus intéressant que les tests ? Je vous dirais quand je le saurai 🤣.
 </div>
 </div>
 
