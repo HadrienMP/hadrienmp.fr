@@ -36,6 +36,12 @@ params:
   images:
   - ProfilDFuck.png
 
+  comment:
+    fediverse:
+      host: mastodon.top
+      user: hadrienmp
+
+
 social:
   twitter: HadrienMP
 
