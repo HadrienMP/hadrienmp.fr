@@ -12,6 +12,8 @@ tags:
 - test
 - TDD
 - catmatique
+comments:
+  fediverse: 110091486493584809
 ---
 
 Je suppose que si vous êtes là, c'est parce que vous savez ce que c'est __TDD__, mais au cas où : __Test Driven Development__. C'est une pratique de design logiciel itératif en 3 temps :  
