@@ -1,12 +1,12 @@
-$schema: 'https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json'
+$schema: "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json"
 basics:
   name: Hadrien __MENS-PELLEN__
   label: Fullstack Software Crafter
   image: >-
     https://hadrienmp.fr/images/ProfilDFuck_hucb44b0d7046e662e04355d743d65e4a5_387620_200x200_resize_q75_h1_box_3.webp
   email: pro@hadrienmp.fr
-  phone: ''
-  url: 'https://hadrienmp.fr'
+  phone: ""
+  url: "https://hadrienmp.fr"
   summary: >-
     Développeur passionné, expérimenté en Java, Elm et Typescript. TDD addict,
     Agiliste et Craftsman freak
@@ -16,30 +16,57 @@ basics:
   profiles:
     - network: LinkedIn
       username: hadrien-mens-pellen-39071231
-      url: 'https://www.linkedin.com/in/hadrien-mens-pellen-39071231/'
+      url: "https://www.linkedin.com/in/hadrien-mens-pellen-39071231/"
     - network: Twitter
       username: HadrienMP
-      url: 'https://twitter.com/hadrienmp'
+      url: "https://twitter.com/hadrienmp"
     - network: Mastodon
-      username: '@HadrienMP@mastodon.top'
-      url: 'https://mastodon.top/@hadrienmp'
+      username: "@HadrienMP@mastodon.top"
+      url: "https://mastodon.top/@hadrienmp"
     - network: Github
       username: HadrienMP
-      url: 'https://github.com/HadrienMP'
+      url: "https://github.com/HadrienMP"
 work:
+  - name: Beta Gouv
+    position: Développeur Senior
+    startDate: "2023-04-03"
+    highlights:
+      - Svelte
+      - Elm
+      - Storybook
+      - Python
+      - Hasura
+      - Scalingo
+    summary: |-
+      Construction et maintenance de __Carnet de bord__, une application de suivi centralisé des personnes en insertion professionnelle. 
+      - Gestion de l'orientation professionnelle, 
+      - des rendez-vous avec différents conseillers,
+      - des objectifs et actions
+  - name: XCG Consulting
+    position: Développeur Elm
+    startDate: "2022-11-07"
+    endDate: "2022-11-25"
+    highlights:
+      - Elm
+      - elm-ui
+      - orus/elm-forms
+      - orus/elm-spa
+    summary: |-
+      Développement de la première version du frontend de gestion des clés d'API pour les utilisateurs de Rednerd. Rednerd
+      est une API de conversion de format de documents.
   - name: Sunday
     position: Développeur Senior
-    startDate: '2021-04-30'
-    endDate: '2022-09-30'
-    highlights: 
-    - TDD
-    - DDD
-    - Trunk Based Development
-    - React
-    - Java 11
-    - Spring Boot
-    - Kafka
-    - GCP
+    startDate: "2021-04-30"
+    endDate: "2022-09-30"
+    highlights:
+      - TDD
+      - DDD
+      - Trunk Based Development
+      - React
+      - Java 11
+      - Spring Boot
+      - Kafka
+      - GCP
     summary: |-
       Sunday est une application qui permet de payer son addition à table, de la partager entre convives et même de commander.  
       <br>
@@ -47,13 +74,13 @@ work:
       Formé mes coééquipiers à la programmation fonctionnelle, le trunk based development, Mob et Pair programming.  
       <br>
       J'ai également maintenu et fait évoluer l'application web mobile. En particulier la gestion des taxes, des reçus et des comptes clients
-      
-    url: 'https://sundayapp.com/'
-    location: 'Nantes, Pays de la Loire, France'
+
+    url: "https://sundayapp.com/"
+    location: "Nantes, Pays de la Loire, France"
   - name: La Combe du Lion Vert
     position: Coach Craft
-    startDate: '2017-04-01'
-    endDate: '2022-04-30'
+    startDate: "2017-04-01"
+    endDate: "2022-04-30"
     highlights:
       - Test Driven Development
       - Mob Programming
@@ -65,18 +92,18 @@ work:
     summary: |
       La combe du lion vert est une ESN parisienne spécialisée dans le Software Craft.
       J'intervenais chez eux pour former leurs équipes sur mes sujets d'expertise
-    url: 'https://www.linkedin.com/company/arolla/'
+    url: "https://www.linkedin.com/company/arolla/"
     location: Paris
   - name: Arolla
     position: Développeur @Finance Active
-    startDate: '2017-11-30'
-    endDate: '2022-04-30'
+    startDate: "2017-11-30"
+    endDate: "2022-04-30"
     highlights:
-    - Java 8
-    - Tapestry
-    - CQRS
-    - TDD
-    - Mob Programming
+      - Java 8
+      - Tapestry
+      - CQRS
+      - TDD
+      - Mob Programming
     summary: |-
       Finance Active est une Fintech parisienne. J'intervenais sur la solution Fairways
       Garantie. C'est un logiciel de gestion des garanties professionnelles. Cette solution
@@ -84,18 +111,18 @@ work:
       <br>
       Nous avons travaillé à stabiliser la plateforme, augmenter le delivery et régler les gros 
       soucis de performance. Notamment grâce à l'introduction du __Mob Programming__ et de __CQRS__.
-    url: 'https://www.linkedin.com/company/arolla/'
+    url: "https://www.linkedin.com/company/arolla/"
     location: Paris
   - name: Arolla
     position: Développeur @Darty
-    startDate: '2016-02-28'
-    endDate: '2017-11-30'
-    highlights: 
-    - TDD
-    - Java 8
-    - Dropwizard
-    - Guice
-    - Web Services REST
+    startDate: "2016-02-28"
+    endDate: "2017-11-30"
+    highlights:
+      - TDD
+      - Java 8
+      - Dropwizard
+      - Guice
+      - Web Services REST
     summary: |-
       Développeur sur les webservices back de __Darty.com__.
       - 1 000 000 de lignes de code
@@ -103,14 +130,14 @@ work:
       <br> 
       - Lead developer de la refonte de l'espace client  
       - Déploiement dans l'équipe de pratiques Agiles et Craft
-    url: 'https://www.linkedin.com/company/arolla/'
+    url: "https://www.linkedin.com/company/arolla/"
     location: Bagnolet
 
   - name: Sopra Steria
     position: Développeur
-    startDate: '2010-02-01'
-    endDate: '2016-01-31'
-    highlights: 
+    startDate: "2010-02-01"
+    endDate: "2016-01-31"
+    highlights:
       - Java
       - Hibernate
       - Spring
@@ -131,20 +158,20 @@ work:
       - France Agrimer, gestion des subventions aux écoles  
       - Le conseil général des hauts de seine, je gérais leurs sites portails
       pour divers événements
-    url: 'https://www.linkedin.com/company/soprasteria/'
+    url: "https://www.linkedin.com/company/soprasteria/"
 education:
   - institution: IMT Mines Albi
     area: Génie des Systèmes d'Information
     studyType: Ingénieur procédés
-    startDate: '2006-12-31'
-    endDate: '2010-12-31'
-    score: ''
+    startDate: "2006-12-31"
+    endDate: "2010-12-31"
+    score: ""
     courses: []
 awards: []
 certificates: []
 publications: []
 skills:
-  - name : Craft
+  - name: Craft
     level: 5/5
     keywords:
       - TDD
@@ -153,7 +180,7 @@ skills:
       - Refactoring
       - Legacy remediation
       - Trunk Based
-  - name : Architecture
+  - name: Architecture
     level: 5/5
     keywords:
       - CQRS
@@ -162,7 +189,7 @@ skills:
       - Lambda core
   - name: Conception
     level: 5/5
-    keywords: 
+    keywords:
       - Object
       - Fonctionnel
       - Calisthenics
@@ -171,7 +198,7 @@ skills:
       - Simple Design
   - name: Backend
     level: 5/5
-    keywords: 
+    keywords:
       - Java
       - NodeJs
       - Spring
@@ -180,6 +207,7 @@ skills:
     level: 4/5
     keywords:
       - Elm
+      - Svelte
       - React
       - Html
       - Css
@@ -207,7 +235,7 @@ languages:
     level: 2
 interests:
   - name: Meetups
-    keywords: 
+    keywords:
       - Animation du meetup de Mob Français
       - Software Crafters Nantes et Rennes
       - Human Talks
@@ -223,4 +251,4 @@ projects: []
 meta:
   version: v1.0.0
   theme: onepage
-  canonical: 'https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json'
+  canonical: "https://github.com/jsonresume/resume-schema/blob/v1.0.0/schema.json"

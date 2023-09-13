@@ -14,6 +14,7 @@
         devShell = pkgs.mkShell {
           packages = with pkgs; [
             hugo
+            just
             imageworsener
             nodePackages.gitmoji-cli
           ];
