@@ -1,111 +1,110 @@
 @import "common";
 
 header {
-    background-color: var(--color-background);
-    box-shadow: 0 2px 2px var(--color-background);
-    transition: background-color ease $darkTransitionDuration, box-shadow ease $darkTransitionDuration;
-    position: sticky;
-    top: 0;
+  background-color: var(--color-background);
+  box-shadow: 0 2px 2px var(--color-background);
+  transition: background-color ease $darkTransitionDuration,
+    box-shadow ease $darkTransitionDuration;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  padding: var(--padding);
+  align-items: center;
+  gap: var(--padding);
+  z-index: 1;
+  width: 100%;
+  line-height: 1;
+
+  h1 {
+    font-weight: var(--weight-normal);
+    font-size: 1rem;
+    flex-grow: 1;
+    margin: 0;
+    color: var(--color-text);
+
+    strong {
+      font-weight: var(--weight-bolder);
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  label[for="nav-toggle"] {
+    display: none;
+  }
+
+  label[for="theme-toggle"] {
+    padding: 0.4rem;
+    border: var(--color-link) 1px solid;
+    border-radius: 5px;
+    color: var(--color-link);
+  }
+
+  a {
+    color: var(--color-text);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-link);
+    }
+  }
+
+  nav {
     display: flex;
-    flex-direction: row;
-    padding: var(--padding);
-    align-items: center;
     gap: var(--padding);
-    z-index: 1;
-    width: 100%;
-    line-height: 1;
+    align-items: center;
 
-    h1 {
-        font-weight: var(--weight-normal);
-        font-size: 1rem;
-        flex-grow: 1;
-        margin: 0;
-        color: var(--color-text);
-
-        strong {
-            font-weight: var(--weight-bolder);
-        }
+    a.active {
+      color: var(--color-link);
+      font-weight: var(--weight-bold);
     }
 
-    input[type="checkbox"] {
-        display: none;
+    a.cta {
+      padding: 0.6rem 1rem;
+
+      &.active {
+        color: var(--color-on-primary);
+      }
+    }
+  }
+
+  @media screen and (max-width: $fullMenuWidth) {
+    nav {
+      display: flex;
+      position: absolute;
+      background-color: var(--color-background);
+      right: 0;
+      left: 0;
+      flex-direction: column;
+      text-align: center;
+      transform: translateY(0.5rem);
+      gap: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height cubic-bezier(0.65, 0.05, 0.36, 1) 0.2s,
+        padding cubic-bezier(0.65, 0.05, 0.36, 1) 0.2s;
+      box-shadow: none;
+
+      a {
+        padding: 1rem;
+
+        &.cta {
+          margin: 0.6rem 0;
+        }
+      }
     }
 
     label[for="nav-toggle"] {
-        display: none;
+      display: inline-block;
     }
 
-    label[for="theme-toggle"] {
-        padding: .4rem;
-        border: var(--color-link) 1px solid;
-        border-radius: 5px;
-        color: var(--color-link)
+    input[id="nav-toggle"]:checked ~ nav {
+      max-height: 100vh;
+      box-shadow: 0 3px 4px var(--color-shadow);
+      padding-bottom: 1rem;
     }
-
-    a {
-        color: var(--color-text);
-        text-decoration: none;
-
-        &:hover {
-            color: var(--color-link);
-        }
-    }
-
-    nav {
-        display: flex;
-        gap: var(--padding);
-        align-items: center;
-
-        a.active {
-            color: var(--color-link);
-            font-weight: var(--weight-bold);
-        }
-
-        a.cta {
-            padding: .6rem 1rem;
-
-            &:hover,
-            &.active {
-                color: white;
-            }
-        }
-    }
-
-    @media screen and (max-width: $fullMenuWidth) {
-        nav {
-            display: flex;
-            position: absolute;
-            background-color: var(--color-background);
-            right: 0;
-            left: 0;
-            flex-direction: column;
-            text-align: center;
-            transform: translateY(.5rem);
-            gap: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition:
-                max-height cubic-bezier(.65, .05, .36, 1) .2s,
-                padding cubic-bezier(.65, .05, .36, 1) .2s;
-            box-shadow: none;
-
-            a {
-                padding: 1rem;
-
-                &.cta {
-                    margin: .6rem 0;
-                }
-            }
-        }
-
-        label[for="nav-toggle"] {
-            display: inline-block;
-        }
-
-        input[id="nav-toggle"]:checked~nav {
-            max-height: 100vh;
-            box-shadow: 0 3px 4px var(--color-shadow);
-            padding-bottom: 1rem;
-        }
-    }
+  }
 }
