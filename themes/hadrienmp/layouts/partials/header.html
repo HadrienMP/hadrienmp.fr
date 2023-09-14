@@ -1,36 +1,30 @@
 <header>
-    <h1><a href="/">Hadrien<strong>MP</strong></a></h1>
-    <div id="nav-wrapper">
-        <input type="checkbox" id="nav-toggle" />
-        <label for="nav-toggle">
-            <i class="las la-bars"></i>
-        </label>
-        <nav>
-            {{ $currentPage := . }}
-
-            {{ range .Site.Menus.main -}}
-
-            {{ $activeClass := "" }}
-            {{ if eq $currentPage.RelPermalink .URL }}
-            {{ $activeClass = "active" }}
-            {{ end }}
-
-            {{ $ctaClass := "" }}
-            {{- with .Page -}}
-            {{ if .Params.Cta }}
-            {{ $ctaClass = "cta" }}
-            {{ end }}
-            {{ end }}
-
-            <a class="{{ $activeClass }} {{ $ctaClass }}" href="{{ .URL | absLangURL }}" title="{{ .Title }}">
-                {{.Name }}
-            </a>
-            {{ end }}
-
-        </nav>
-    </div>
-    <input type="checkbox" id="theme-toggle" />
-    <label for="theme-toggle">
-        <i class="lar la-moon"></i>
+  <h1>
+    <a href="/">Hadrien<strong>MP</strong></a>
+  </h1>
+  <div id="nav-wrapper">
+    <input type="checkbox" id="nav-toggle" />
+    <label for="nav-toggle" aria-label="Afficher le menu">
+      <i class="las la-bars"></i>
     </label>
+    <nav>
+      {{ $currentPage := . }} {{ range .Site.Menus.main -}} {{ $activeClass :=
+      "" }} {{ if eq $currentPage.RelPermalink .URL }} {{ $activeClass =
+      "active" }} {{ end }} {{ $ctaClass := "" }} {{- with .Page -}} {{ if
+      .Params.Cta }} {{ $ctaClass = "cta" }} {{ end }} {{ end }}
+
+      <a
+        class="{{ $activeClass }} {{ $ctaClass }}"
+        href="{{ .URL | absLangURL }}"
+        title="{{ .Title }}"
+      >
+        {{.Name }}
+      </a>
+      {{ end }}
+    </nav>
+  </div>
+  <input type="checkbox" id="theme-toggle" />
+  <label for="theme-toggle" aria-label="Activer/Désactiver le thème sombre">
+    <i class="lar la-moon"></i>
+  </label>
 </header>

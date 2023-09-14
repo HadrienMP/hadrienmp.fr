@@ -6,7 +6,7 @@ svg {
 }
 
 main > img {
-  border: 1px solid var(--color-link);
+  border: 1px solid var(--color-text-primary);
 }
 h1 + h2 {
   margin-top: 0;
@@ -21,7 +21,7 @@ p {
   gap: 1.6rem;
   justify-content: center;
   div:nth-child(2) {
-    flex : 1;
+    flex: 1;
     min-width: 18rem;
   }
 }
@@ -32,7 +32,7 @@ article {
 
 #comments {
   padding-top: var(--space-s);
-  border-top: 1px solid var(--color-link);
+  border-top: 1px solid var(--color-text-accent);
 
   .mastodon-comment {
     background-color: var(--color-card);
@@ -42,15 +42,16 @@ article {
     .status {
       display: flex;
       gap: 0.8rem;
-      font-size: .8rem;
+      font-size: 0.8rem;
       a {
         text-decoration: none;
       }
       .active {
-        color: var(--color-link);
+        color: var(--color-text-accent);
       }
-      .las {font-size: 1rem;}
-
+      .las {
+        font-size: 1rem;
+      }
     }
     .toto {
       display: flex;

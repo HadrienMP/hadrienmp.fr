@@ -9,9 +9,9 @@ header {
   top: 0;
   display: flex;
   flex-direction: row;
-  padding: var(--padding);
+  padding: var(--space-s);
   align-items: center;
-  gap: var(--padding);
+  gap: var(--space-s);
   z-index: 1;
   width: 100%;
   line-height: 1;
@@ -38,9 +38,9 @@ header {
 
   label[for="theme-toggle"] {
     padding: 0.4rem;
-    border: var(--color-link) 1px solid;
+    border: var(--color-text-accent) 1px solid;
     border-radius: 5px;
-    color: var(--color-link);
+    color: var(--color-text-accent);
   }
 
   a {
@@ -48,26 +48,22 @@ header {
     text-decoration: none;
 
     &:hover {
-      color: var(--color-link);
+      color: var(--color-text-accent);
     }
   }
 
   nav {
     display: flex;
-    gap: var(--padding);
+    gap: var(--space-s);
     align-items: center;
 
     a.active {
-      color: var(--color-link);
+      color: var(--color-text-accent);
       font-weight: var(--weight-bold);
     }
 
     a.cta {
       padding: 0.6rem 1rem;
-
-      &.active {
-        color: var(--color-on-primary);
-      }
     }
   }
 

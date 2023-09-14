@@ -11,7 +11,6 @@ html {
     background-color ease $darkTransitionDuration;
   font-weight: var(--weight-normal);
   height: 100%;
-  --padding: 1rem;
   --space-s: 1rem;
   --space-m: 2rem;
   --space-l: 4rem;
@@ -20,13 +19,17 @@ html {
   --weight-bold: 400;
   --weight-bolder: 700;
 
-  --color-text: black;
   --color-background: white;
-  --color-link: black;
-  --color-accent-text: white;
+  --color-background-accent: black;
+  --color-background-primary: black;
+  --color-text: black;
+  --color-text-accent: black;
+  --color-text-primary: black;
+  --color-text-on-accent: white;
+  --color-text-on-primary: white;
+
   --color-shadow: #c4c4c4;
   --color-card: #f8f8f8;
-  --color-on-primary: white;
 
   @mixin dark-palette {
     --color-primary-100: #ff9d01;
@@ -43,13 +46,17 @@ html {
     --color-surface-500: #717171;
     --color-surface-600: #8b8b8b;
 
-    --color-text: #eaeaea;
     --color-background: var(--color-surface-100);
-    --color-link: var(--color-primary-100);
-    --color-accent-text: black;
+    --color-background-accent: var(--color-surface-200);
+    --color-background-primary: var(--color-primary-300);
+    --color-text: #ddd;
+    --color-text-accent: white;
+    --color-text-primary: var(--color-primary-100);
+    --color-text-on-accent: white;
+    --color-text-on-primary: black;
+
     --color-shadow: #ff9d0178;
-    --color-card: var(--color-surface-300);
-    --color-on-primary: black;
+    --color-card: var(--color-background-accent);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -79,28 +86,33 @@ body > * {
 }
 
 a {
-  color: var(--color-link);
-  // text-decoration: none;
-
+  color: var(--color-text);
+  transition: ease color 0.2s, ease text-decoration 0.2s;
   &:hover {
+    color: var(--color-text-accent);
     text-decoration: underline;
   }
 }
 
 .cta {
   border: none;
-  background-color: var(--color-link);
-  color: var(--color-accent-text);
+  background-color: var(--color-background-primary);
+  color: var(--color-text-on-primary);
   border-radius: 2rem;
   padding: 1rem;
   text-align: center;
   text-decoration: none;
   font-weight: normal;
+
+  &:hover,
+  &.active {
+    color: var(--color-text-on-primary);
+  }
 }
 
 main {
   z-index: 0;
-  padding: var(--padding);
+  padding: var(--space-s);
   padding-top: 0.4rem;
   padding-bottom: 4rem;
   flex-grow: 1;
@@ -121,14 +133,14 @@ h5 {
 }
 
 h1 {
-  color: var(--color-link);
+  color: var(--color-text-primary);
   font-size: 1.8rem;
   font-weight: var(--weight-bolder);
   margin: 2rem 0 1rem;
 }
 
 h2 {
-  color: var(--color-link);
+  color: var(--color-primary-400);
   font-size: 1.5rem;
   font-weight: var(--weight-bold);
   margin: 1.6rem 0 0.8rem;
@@ -136,7 +148,7 @@ h2 {
 }
 
 h3 {
-  color: var(--color-link);
+  color: var(--color-primary-600);
   font-size: 1.3rem;
   font-weight: var(--weight-normal);
   text-align: justify;
@@ -183,6 +195,7 @@ em {
 
 strong {
   font-weight: var(--weight-bolder);
+  color: var(--color-text-accent);
 }
 
 .highlight pre {
@@ -211,8 +224,8 @@ hr {
 
 #blog-title {
   width: 100%;
-  border-top: 1px solid var(--color-link);
-  border-bottom: 1px solid var(--color-link);
+  border-top: 1px solid var(--color-text-primary);
+  border-bottom: 1px solid var(--color-text-primary);
   padding: 1rem 0;
   margin: 1rem 0 1.4rem;
   h1 {

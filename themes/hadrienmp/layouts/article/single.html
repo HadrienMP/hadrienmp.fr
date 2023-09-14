@@ -15,16 +15,16 @@
 
 {{ if isset .Params "comments" }}
 <section id="comments">
-  <h2>Comments</h2>
+  <h2>Commentaires</h2>
 
   <noscript>
     <div id="error">
-      Please enable JavaScript to view the comments powered by the Fediverse.
+      JavaScript doit être activé pour voir les commentaires du Fédivers.
     </div>
   </noscript>
   
-  <p>You can use your Fediverse (i.e. Mastodon, among many others) account to reply to this <a class="link"
-      href="https://{{ .Site.Params.comment.fediverse.host }}/@{{ .Site.Params.comment.fediverse.user }}/{{ .Params.fediverse }}">post</a>.
+  <p>Utilisez votre compte Fédivers (Mastodon par exemple) pour commenter ce <a class="link"
+      href="https://{{ .Site.Params.comment.fediverse.host }}/@{{ .Site.Params.comment.fediverse.user }}/{{ .Params.comments.fediverse }}">post</a>.
   </p>
   <p id="mastodon-comments-list"></p>
   
@@ -111,7 +111,7 @@
     function loadComments() {
       if (commentsLoaded) return;
   
-      document.getElementById("mastodon-comments-list").innerHTML = "Loading comments from the Fediverse...";
+      document.getElementById("mastodon-comments-list").innerHTML = "Chargement des commentaires...";
   
       fetch('https://' + host + '/api/v1/statuses/' + id + '/context')
         .then(function(response) {
@@ -122,7 +122,7 @@
               document.getElementById('mastodon-comments-list').innerHTML = "";
               render_toots(data['descendants'], id, 0)
           } else {
-            document.getElementById('mastodon-comments-list').innerHTML = "<p>No comments yet</p>";
+            document.getElementById('mastodon-comments-list').innerHTML = "<p>Aucun commentaire pour l'instant</p>";
           }
   
           commentsLoaded = true;
