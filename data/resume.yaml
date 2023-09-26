@@ -117,24 +117,11 @@ work:
     position: Développeur @Darty
     startDate: "2016-02-28"
     endDate: "2017-11-30"
-    highlights:
-      - TDD
-      - Java 8
-      - Dropwizard
-      - Guice
-      - Web Services REST
-    summary: |-
-      Développeur sur les webservices back de __Darty.com__.
-      - 1 000 000 de lignes de code
-      - Plusieurs millions de chiffre d'affaire / jour  
-      <br> 
-      - Lead developer de la refonte de l'espace client  
-      - Déploiement dans l'équipe de pratiques Agiles et Craft
     url: "https://www.linkedin.com/company/arolla/"
     location: Bagnolet
 
-  - name: Sopra Steria
-    position: Développeur
+  - name: Sopra
+    position: Développeur grands ministères
     startDate: "2010-02-01"
     endDate: "2016-01-31"
     highlights:
@@ -143,21 +130,6 @@ work:
       - Spring
       - Struts
       - Liferay
-    summary: |-
-      Développeur et Lead technique chez divers clients dans le Secteur public
-      :  
-      - Le __ministère de l'intérieur__ sur le système de __partage des
-      informations policières de l'espace Schengen__.  
-        - Volume de transactions important (milliers par minutes)  
-        - Exigence de fiabilité  
-      - Le __ministère des finances__  
-        - Reprise de contrôle sur la solution de supervision qui était en échec  
-          - Stabilisation  
-          - Documentation  
-        - Mise en place du système de déclaration des factures de l'état  
-      - France Agrimer, gestion des subventions aux écoles  
-      - Le conseil général des hauts de seine, je gérais leurs sites portails
-      pour divers événements
     url: "https://www.linkedin.com/company/soprasteria/"
 education:
   - institution: IMT Mines Albi
