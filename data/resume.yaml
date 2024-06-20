@@ -27,6 +27,21 @@ basics:
       username: HadrienMP
       url: "https://github.com/HadrienMP"
 work:
+  - name: YASO
+    position: Développeur Senior 
+    startDate: '2023-10-01'
+    endDate: '2024-05-01'
+    highlights: 
+    - Elm
+    - Python
+    - Kinto
+    - Component Library
+    - Nix
+    - PostgreSQL
+    summary: |-
+      Développement du backoffice et front office d'une solution de sélection accélérée de prestataires de services pour le retour à domicile de patients après hospitalisation. 
+    url: https://yaso-sante.fr/
+    location: Nantes, Pays de la Loire, France
   - name: Beta Gouv
     position: Développeur Senior
     startDate: "2023-04-03"
@@ -42,18 +57,6 @@ work:
       - Gestion de l'orientation professionnelle, 
       - des rendez-vous avec différents conseillers,
       - des objectifs et actions
-  - name: XCG Consulting
-    position: Développeur Elm
-    startDate: "2022-11-07"
-    endDate: "2022-11-25"
-    highlights:
-      - Elm
-      - elm-ui
-      - orus/elm-forms
-      - orus/elm-spa
-    summary: |-
-      Développement de la première version du frontend de gestion des clés d'API pour les utilisateurs de Rednerd. Rednerd
-      est une API de conversion de format de documents.
   - name: Sunday
     position: Développeur Senior
     startDate: "2021-04-30"

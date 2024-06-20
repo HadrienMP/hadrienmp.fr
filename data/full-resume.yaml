@@ -16,6 +16,43 @@ basics:
     username: hadrien-mens-pellen-39071231
     url: https://www.linkedin.com/in/hadrien-mens-pellen-39071231/
 work:
+- name: YASO
+  position: Développeur Senior 
+  startDate: '2023-10-01'
+  endDate: '2024-05-01'
+  highlights: 
+  - Elm
+  - Python
+  - Kinto
+  - Component Library
+  - Nix
+  - PostgreSQL
+  summary: |-
+    Développement du backoffice et front office d'une solution de sélection accélérée de prestataires de services pour le retour à domicile de patients après hospitalisation. 
+
+    L'intégralité du site et des services sont réalisés en Elm. Le backoffice est à destination des hôpitaux, de leurs assistant.e.s sociales en particulier. Il permet de stocker les prescriptions et besoins spécifique des patients. Un service automatique va aller rechercher les prestataires correspondants dans l'annuaire Yaso et envoyer des demandes de prise en charge. Les prestataires répondent sur leur front office.
+  url: https://yaso-sante.fr/
+  location: Nantes, Pays de la Loire, France
+- name: Beta-gouv, GIP inclusion
+  position: Développeur Senior 
+  startDate: '2023-04-01'
+  endDate: '2023-10-01'
+  highlights: 
+  - Elm
+  - Svelte
+  - Typescript
+  - Nix
+  - Python
+  - Fast API
+  - Hasura
+  - PostgreSQL
+  summary: |-
+    Développeur sénior. Construction et maintenance d'une application de suivi centralisé des personnes en insertion professionnelle. 
+    - Gestion de l'orientation professionnelle, 
+    - des rendez-vous avec différents conseillers,
+    - des objectifs et actions
+  url: https://beta.gouv.fr/startups/carnet.de.bord.html
+  location: Nantes, Pays de la Loire, France
 - name: XCG Consulting
   position: Développeur Elm
   startDate: '2022-11-01'

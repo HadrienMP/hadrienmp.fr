@@ -13,6 +13,15 @@
             <h1>{{ .basics.name | markdownify }}
             <h2>{{ .basics.label }}</h2>
         </header>
+
+        <section id="contact">
+            <div class="title">Contact</div>
+            <div class="content">
+                <p><a href="mailto:{{ .basics.email }}" target="_blank">{{ .basics.email }}</a></p>
+                <p><a href="{{ .basics.url }}" target="_blank">{{ .basics.url }}</a></p>
+            </div>
+        </section>
+
        
         <section id="skills">
             <div class="title">Compétences</div>

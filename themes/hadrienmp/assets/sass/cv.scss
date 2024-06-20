@@ -186,6 +186,15 @@ header {
 }
 
 // -------------------------
+// Contact
+// -------------------------
+#contact .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+// -------------------------
 // Languages
 // -------------------------
 #languages .content {
